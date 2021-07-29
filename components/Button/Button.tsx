@@ -1,5 +1,5 @@
 type Props = {
-  text: StringConstructor
+  text: string
 }
 
 const Button = ({ text }: Props) => <button className="btn">{text}</button>
