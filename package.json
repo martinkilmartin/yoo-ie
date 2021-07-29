@@ -5,23 +5,38 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "test": "jest",
+    "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "daisyui": "^1.10.0",
-    "next": "11.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "theme-change": "^2.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@testing-library/react": "^12.0.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.7",
     "@types/react": "17.0.15",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
     "autoprefixer": "^10.3.1",
+    "babel-jest": "^27.0.6",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.24.0",
     "husky": "^7.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
+    "jest-watch-typeahead": "^0.6.4",
     "lint-staged": "^11.1.1",
     "postcss": "^8.3.6",
     "prettier": "2.3.2",
@@ -31,15 +46,18 @@
   "license": "MIT",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
     }
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "prettier --write"
+      "yarn lint",
+      "yarn format"
     ],
     "**/*.{md,mdx,json}": [
-      "prettier --write"
+      "yarn lint",
+      "yarn format"
     ]
   }
 }

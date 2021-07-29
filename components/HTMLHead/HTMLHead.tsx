@@ -5,7 +5,7 @@ type Props = {
   description: string
 }
 
-const HTMLHead = ({ title, description }: Props) => (
+const HTMLHead = ({ title, description }: Props): JSX.Element => (
   <Head>
     <title>{title}</title>
     <meta charSet="utf-8" />

@@ -6,7 +6,7 @@ type Props = {
   button?: string
 }
 
-const Hero = ({ heading, description, button }: Props) => (
+const Hero = ({ heading, description, button }: Props): JSX.Element => (
   <div className="min-h-screen hero bg-base-200">
     <div className="text-center hero-content">
       <div className="max-w-md">

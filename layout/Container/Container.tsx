@@ -4,7 +4,7 @@ type Props = {
   children: ReactNode
 }
 
-const Container = ({ children }: Props) => (
+const Container = ({ children }: Props): JSX.Element => (
   <div className="container mx-auto">{children}</div>
 )
 

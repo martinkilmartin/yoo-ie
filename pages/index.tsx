@@ -21,7 +21,7 @@ const Home = ({
   heroTitle,
   heroSpeel,
   cta,
-}: Props) => (
+}: Props): JSX.Element => (
   <Container>
     <HTMLHead title={title} description={description} />
     <Navbar brand={brandName} />
@@ -30,14 +30,12 @@ const Home = ({
 )
 
 export const getStaticProps: GetStaticProps = async () => {
-  const title: string = 'Sionnach Solutions a.k.a. Sionnach Buí'
-  const brandName: string = 'Sionnach Solutions a.k.a. Sionnach Buí'
-  const description: string =
-    'Introducing Innovation In Irish Internet Industries'
-  const heroTitle: string =
-    'Introducing Innovation In Irish Internet Industries'
-  const heroSpeel: string = 'User Interfaces & eCommerce Integrations'
-  const cta: string = 'Innovate Now'
+  const title = 'Sionnach Solutions a.k.a. Sionnach Buí'
+  const brandName = 'Sionnach Solutions a.k.a. Sionnach Buí'
+  const description = 'Introducing Innovation In Irish Internet Industries'
+  const heroTitle = 'Introducing Innovation In Irish Internet Industries'
+  const heroSpeel = 'User Interfaces & eCommerce Integrations'
+  const cta = 'Innovate Now'
 
   return {
     props: {
