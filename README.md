@@ -2,38 +2,38 @@
 
 Website for Sionnach Solutions / Sionnach Buí
 
-### Run dev build & start dev server
+## Run dev build & start dev server
 
 `yarn dev`
 
-### Run prod build
+## Run prod build
 
 `yarn build`
 
-### Start prod-like server with prod build
+## Start prod-like server with prod build
 
 `yarn start`
 
-### Format code
+## Format code
 
 `yarn format`
 
-### Lint code
+## Lint code
 
 `yarn lint`
 
-### Type-check code
+## Type-check code
 
 `yarn type-check`
 
-### Test code
+## Test code
 
 `yarn test`
 
-### Test watcher
+## Test watcher
 
 `yarn test:watch`
 
-### Lint, Type-check & Test code
+## Lint, Type-check & Test code
 
 `yarn test-all`
