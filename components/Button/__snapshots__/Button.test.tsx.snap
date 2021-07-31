@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button displays text 1`] = `
+<button
+  className="btn"
+>
+  Push Me
+</button>
+`;

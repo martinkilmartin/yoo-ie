@@ -30,6 +30,10 @@ Website for Sionnach Solutions / Sionnach Buí
 
 `yarn test`
 
+### Test watcher
+
+`yarn test:watch`
+
 ### Lint, Type-check & Test code
 
 `yarn test-all`
