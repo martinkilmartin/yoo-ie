@@ -51,8 +51,8 @@ const LOADING = {
 }
 
 const ANIMATION = {
-  no: '',
-  noAnimation: ' no-animation',
+  no: ' no-animation',
+  yes: '',
 }
 
 type Props = {
@@ -76,7 +76,7 @@ const Button = ({
   status = 'no',
   glass = 'no',
   loading = 'no',
-  animation = 'no',
+  animation = 'yes',
 }: Props): JSX.Element => {
   return (
     <button
