@@ -7,3 +7,19 @@ exports[`Button displays text 1`] = `
   Push Me
 </button>
 `;
+
+exports[`Button displays text and is small 1`] = `
+<button
+  className="btn  btn-sm"
+>
+  Push Me
+</button>
+`;
+
+exports[`Button displays text and is small and wide 1`] = `
+<button
+  className="btn  btn-sm  btn-wide"
+>
+  Push Me
+</button>
+`;

@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
+    "clsx": "^1.1.1",
     "daisyui": "^1.10.0",
     "next": "latest",
     "react": "^17.0.2",
