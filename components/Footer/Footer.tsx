@@ -7,7 +7,7 @@ type Props = {
 }
 
 const Footer = ({ brand, links }: Props): JSX.Element => (
-  <footer className="w-full py-8 bg-neutral text-neutral-content">
+  <footer className="w-full py-8 bg-neutral text-neutral-content rounded-box">
     <div className="max-w-screen-xl px-4 mx-auto">
       {links && (
         <ul className="flex flex-wrap justify-between max-w-screen-md mx-auto text-lg font-light">
