@@ -4,10 +4,11 @@ import { Container } from '../layout/Container'
 import { HTMLHead } from '../components/HTMLHead'
 import { Navbar } from '../components/Navbar'
 import { Hero } from '../components/Hero'
+import { Footer } from '../components/Footer'
 
 type Props = {
   title: string
-  brandName: string
+  brand: string
   description: string
   heroTitle: string
   heroSpeel: string
@@ -16,7 +17,7 @@ type Props = {
 
 const Home = ({
   title,
-  brandName,
+  brand,
   description,
   heroTitle,
   heroSpeel,
@@ -24,14 +25,15 @@ const Home = ({
 }: Props): JSX.Element => (
   <Container>
     <HTMLHead title={title} description={description} />
-    <Navbar brand={brandName} />
+    <Navbar brand={brand} />
     <Hero heading={heroTitle} description={heroSpeel} button={cta} />
+    <Footer brand={brand} />
   </Container>
 )
 
 export const getStaticProps: GetStaticProps = async () => {
   const title = 'Sionnach Solutions a.k.a. Sionnach Buí'
-  const brandName = 'Sionnach Solutions a.k.a. Sionnach Buí'
+  const brand = 'Sionnach Solutions'
   const description = 'Introducing Innovation In Irish Internet Industries'
   const heroTitle = 'Introducing Innovation In Irish Internet Industries'
   const heroSpeel = 'User Interfaces & eCommerce Integrations'
@@ -40,7 +42,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       title,
-      brandName,
+      brand,
       description,
       heroTitle,
       heroSpeel,
