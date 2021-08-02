@@ -13,6 +13,7 @@ type Props = {
   heroTitle: string
   heroSpeel: string
   cta: string
+  footerLinks: string[]
 }
 
 const Home = ({
@@ -22,12 +23,13 @@ const Home = ({
   heroTitle,
   heroSpeel,
   cta,
+  footerLinks,
 }: Props): JSX.Element => (
   <Container>
     <HTMLHead title={title} description={description} />
     <Navbar brand={brand} />
     <Hero heading={heroTitle} description={heroSpeel} button={cta} />
-    <Footer brand={brand} />
+    <Footer brand={brand} links={footerLinks} />
   </Container>
 )
 
@@ -38,6 +40,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const heroTitle = 'Introducing Innovation In Irish Internet Industries'
   const heroSpeel = 'User Interfaces & eCommerce Integrations'
   const cta = 'Innovate Now'
+  const footerLinks = ['abcdefghi', 'jklmnopqrs', 'tuv', 'wxyz']
 
   return {
     props: {
@@ -47,6 +50,7 @@ export const getStaticProps: GetStaticProps = async () => {
       heroTitle,
       heroSpeel,
       cta,
+      footerLinks,
     },
   }
 }

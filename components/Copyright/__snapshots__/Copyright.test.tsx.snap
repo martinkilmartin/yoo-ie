@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Copyright displays current year and brand 1`] = `
+<div
+  className="flex items-center justify-center pt-10 font-light text-center sm:pt-12"
+>
+  © 2021 Acme Teo.
+</div>
+`;

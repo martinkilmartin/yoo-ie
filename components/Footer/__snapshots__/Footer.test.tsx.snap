@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer displays copyright with current year and brand 1`] = `
+<footer
+  className="w-full max-w-screen-xl px-4 py-8 mx-auto bg-neutral text-neutral-content rounded-box"
+>
+  <div
+    className="flex items-center justify-center pt-10 font-light text-center sm:pt-12"
+  >
+    © 2021 Acme Teo.
+  </div>
+</footer>
+`;
+
+exports[`Footer displays links and copyright with current year and brand 1`] = `
+<footer
+  className="w-full max-w-screen-xl px-4 py-8 mx-auto bg-neutral text-neutral-content rounded-box"
+>
+  <ul
+    className="flex flex-wrap justify-between max-w-screen-md mx-auto text-lg font-light"
+  >
+    <li
+      className="my-2"
+    >
+      <a
+        className="transition-colors duration-200 hover:text-neutral-focus"
+        href="#"
+      >
+        abcdefgh
+      </a>
+    </li>
+    <li
+      className="my-2"
+    >
+      <a
+        className="transition-colors duration-200 hover:text-neutral-focus"
+        href="#"
+      >
+        ijklmn
+      </a>
+    </li>
+    <li
+      className="my-2"
+    >
+      <a
+        className="transition-colors duration-200 hover:text-neutral-focus"
+        href="#"
+      >
+        opq
+      </a>
+    </li>
+    <li
+      className="my-2"
+    >
+      <a
+        className="transition-colors duration-200 hover:text-neutral-focus"
+        href="#"
+      >
+        rst
+      </a>
+    </li>
+    <li
+      className="my-2"
+    >
+      <a
+        className="transition-colors duration-200 hover:text-neutral-focus"
+        href="#"
+      >
+        uvwxyz
+      </a>
+    </li>
+  </ul>
+  <div
+    className="flex items-center justify-center pt-10 font-light text-center sm:pt-12"
+  >
+    © 2021 Acme Teo.
+  </div>
+</footer>
+`;
