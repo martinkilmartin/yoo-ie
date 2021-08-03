@@ -5,7 +5,7 @@ exports[`ListLink exists with class 1`] = `
   className="my-2"
 >
   <a
-    className="transition-colors duration-200 hover:text-neutral-focus"
+    className="transition-colors duration-200 hover:text-accent-focus"
     href="#"
   >
     Click Me!

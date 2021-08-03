@@ -14,7 +14,7 @@ test('ListLink exists with class', () => {
   ).toEqual(1)
   expect(
     listLinkInstance.findByProps({
-      className: 'transition-colors duration-200 hover:text-neutral-focus',
+      className: 'transition-colors duration-200 hover:text-accent-focus',
     }).children[0]
   ).toEqual(listLinkText)
 })

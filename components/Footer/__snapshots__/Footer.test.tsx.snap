@@ -20,31 +20,31 @@ exports[`Footer displays links and copyright with current year and brand 1`] = `
     className="flex flex-wrap justify-between max-w-screen-md mx-auto text-lg font-light"
   >
     <a
-      className="transition-colors duration-200 hover:text-neutral-focus"
+      className="transition-colors duration-200 hover:text-accent-focus"
       href="#"
     >
       abcdefgh
     </a>
     <a
-      className="transition-colors duration-200 hover:text-neutral-focus"
+      className="transition-colors duration-200 hover:text-accent-focus"
       href="#"
     >
       ijklmn
     </a>
     <a
-      className="transition-colors duration-200 hover:text-neutral-focus"
+      className="transition-colors duration-200 hover:text-accent-focus"
       href="#"
     >
       opq
     </a>
     <a
-      className="transition-colors duration-200 hover:text-neutral-focus"
+      className="transition-colors duration-200 hover:text-accent-focus"
       href="#"
     >
       rst
     </a>
     <a
-      className="transition-colors duration-200 hover:text-neutral-focus"
+      className="transition-colors duration-200 hover:text-accent-focus"
       href="#"
     >
       uvwxyz
