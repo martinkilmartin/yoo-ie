@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link displays text and default # href 1`] = `
+<a
+  className="transition-colors duration-200 hover:text-neutral-focus"
+  href="#"
+>
+  Click Me!
+</a>
+`;

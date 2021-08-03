@@ -13,6 +13,45 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement<any, any> {
 }
 
 export function reportWebVitals(metric: NextWebVitalsMetric): void {
+  // handle Web Vitals
+  if (metric.label === 'web-vital') {
+    switch (metric.name) {
+      case 'FCP':
+        // handle FCP results
+        break
+      case 'LCP':
+        // handle LCP results
+        break
+      case 'CLS':
+        // handle CLS results
+        break
+      case 'FID':
+        // handle FID results
+        break
+      case 'TTFB':
+        // handle TTFB results
+        break
+      default:
+        break
+    }
+  }
+  // handle NextJS results
+  else if (metric.label === 'custom') {
+    switch (metric.name) {
+      case 'Next.js-hydration':
+        // handle hydration results
+        break
+      case 'Next.js-route-change-to-render':
+        // handle route-change to render results
+        break
+      case 'Next.js-render':
+        // handle render results
+        break
+      default:
+        break
+    }
+  }
+
   // const body =
   JSON.stringify(metric)
   // const url = 'https://example.com/analytics'

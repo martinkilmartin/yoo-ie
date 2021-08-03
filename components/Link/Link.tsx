@@ -4,14 +4,12 @@ type Props = {
 }
 
 const Link = ({ text, href = '#' }: Props): JSX.Element => (
-  <li className="my-2">
-    <a
-      className="transition-colors duration-200 hover:text-neutral-focus"
-      href={href}
-    >
-      {text}
-    </a>
-  </li>
+  <a
+    className="transition-colors duration-200 hover:text-accent-focus"
+    href={href}
+  >
+    {text}
+  </a>
 )
 
 export default Link

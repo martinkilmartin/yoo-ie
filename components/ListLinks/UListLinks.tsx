@@ -4,7 +4,7 @@ type Props = {
   links?: string[]
 }
 
-const ListLinks = ({ links = [] }: Props): JSX.Element => (
+const UListLinks = ({ links = [] }: Props): JSX.Element => (
   <ul className="flex flex-wrap justify-between max-w-screen-md mx-auto text-lg font-light">
     {links.map((link, index) => (
       <Link text={link} key={`${link.substring(0, 4)}_${index}`} />
@@ -12,4 +12,4 @@ const ListLinks = ({ links = [] }: Props): JSX.Element => (
   </ul>
 )
 
-export default ListLinks
+export default UListLinks
