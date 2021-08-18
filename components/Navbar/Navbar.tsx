@@ -7,6 +7,11 @@ const Navbar = ({ brand }: Props): JSX.Element => (
     <div className="flex-1 px-2 mx-2">
       <span className="text-lg font-bold">{brand}</span>
     </div>
+    <div className="flex-none">
+      <button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS">
+        🌝 light 🌚 dark
+      </button>
+    </div>
   </div>
 )
 
