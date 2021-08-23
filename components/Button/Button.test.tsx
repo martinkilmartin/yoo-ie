@@ -7,9 +7,9 @@ test('Button displays text', () => {
   const tree = buttonRenderer.toJSON()
   expect(tree).toMatchSnapshot()
   const buttonInstance = buttonRenderer.root
-  expect(buttonInstance.findByProps({ className: 'btn' }).children[0]).toEqual(
-    buttonText
-  )
+  expect(
+    buttonInstance.findByProps({ className: 'btn  btn-primary' }).children[0]
+  ).toEqual(buttonText)
 })
 
 test('Button displays text and is small', () => {
@@ -22,7 +22,8 @@ test('Button displays text and is small', () => {
   expect(tree).toMatchSnapshot()
   const buttonInstance = buttonRenderer.root
   expect(
-    buttonInstance.findByProps({ className: 'btn  btn-sm' }).children[0]
+    buttonInstance.findByProps({ className: 'btn  btn-sm  btn-primary' })
+      .children[0]
   ).toEqual(buttonText)
 })
 
@@ -37,7 +38,8 @@ test('Button displays text and is small and wide', () => {
   expect(tree).toMatchSnapshot()
   const buttonInstance = buttonRenderer.root
   expect(
-    buttonInstance.findByProps({ className: 'btn  btn-sm  btn-wide' })
-      .children[0]
+    buttonInstance.findByProps({
+      className: 'btn  btn-sm  btn-wide  btn-primary',
+    }).children[0]
   ).toEqual(buttonText)
 })

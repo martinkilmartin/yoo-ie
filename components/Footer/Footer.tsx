@@ -1,15 +1,14 @@
-import { UListLinks } from '../ListLinks'
 import { Copyright } from '../Copyright'
 
 type Props = {
-  links?: string[]
   brand: string
 }
 
-const Footer = ({ links, brand }: Props): JSX.Element => (
-  <footer className="w-full max-w-screen-xl px-4 py-8 mx-auto bg-primary text-primary-content rounded-box">
-    {links && <UListLinks links={links} />}
-    <Copyright brand={brand} />
+const Footer = ({ brand }: Props): JSX.Element => (
+  <footer className="p-10 footer bg-primary text-primary-content footer-center">
+    <div>
+      <Copyright brand={brand} />
+    </div>
   </footer>
 )
 

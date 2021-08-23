@@ -2,58 +2,12 @@
 
 exports[`Footer displays copyright with current year and brand 1`] = `
 <footer
-  className="w-full max-w-screen-xl px-4 py-8 mx-auto bg-primary text-primary-content rounded-box"
+  className="p-10 footer bg-primary text-primary-content footer-center"
 >
-  <div
-    className="flex items-center justify-center pt-10 font-light text-center sm:pt-12"
-  >
-    © 2021 Acme Teo.
-  </div>
-</footer>
-`;
-
-exports[`Footer displays links and copyright with current year and brand 1`] = `
-<footer
-  className="w-full max-w-screen-xl px-4 py-8 mx-auto bg-primary text-primary-content rounded-box"
->
-  <ul
-    className="flex flex-wrap justify-between max-w-screen-md mx-auto text-lg font-light"
-  >
-    <a
-      className="transition-colors duration-200 hover:text-accent-focus"
-      href="#"
-    >
-      abcdefgh
-    </a>
-    <a
-      className="transition-colors duration-200 hover:text-accent-focus"
-      href="#"
-    >
-      ijklmn
-    </a>
-    <a
-      className="transition-colors duration-200 hover:text-accent-focus"
-      href="#"
-    >
-      opq
-    </a>
-    <a
-      className="transition-colors duration-200 hover:text-accent-focus"
-      href="#"
-    >
-      rst
-    </a>
-    <a
-      className="transition-colors duration-200 hover:text-accent-focus"
-      href="#"
-    >
-      uvwxyz
-    </a>
-  </ul>
-  <div
-    className="flex items-center justify-center pt-10 font-light text-center sm:pt-12"
-  >
-    © 2021 Acme Teo.
+  <div>
+    <p>
+      © 2021 Acme Teo.
+    </p>
   </div>
 </footer>
 `;

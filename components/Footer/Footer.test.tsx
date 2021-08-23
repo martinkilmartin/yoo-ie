@@ -8,34 +8,9 @@ test('Footer displays copyright with current year and brand', () => {
   expect(tree).toMatchSnapshot()
   const footerInstance = footerRenderer.root
   const footerElement = footerInstance.findByProps({
-    className:
-      'w-full max-w-screen-xl px-4 py-8 mx-auto bg-primary text-primary-content rounded-box',
+    className: 'p-10 footer bg-primary text-primary-content footer-center',
   })
-  expect(
-    footerElement.findByProps({
-      className:
-        'flex items-center justify-center pt-10 font-light text-center sm:pt-12',
-    }).children[0]
-  ).toEqual(`© ${new Date().getFullYear()} ${brand}`)
-})
-
-test('Footer displays links and copyright with current year and brand', () => {
-  const footerLinks = ['abcdefgh', 'ijklmn', 'opq', 'rst', 'uvwxyz']
-  const brand = 'Acme Teo.'
-  const footerRenderer = renderer.create(
-    <Footer brand={brand} links={footerLinks} />
+  expect(footerElement.findByType('p').children[0]).toEqual(
+    `© ${new Date().getFullYear()} ${brand}`
   )
-  const tree = footerRenderer.toJSON()
-  expect(tree).toMatchSnapshot()
-  const footerInstance = footerRenderer.root
-  const footerElement = footerInstance.findByProps({
-    className:
-      'w-full max-w-screen-xl px-4 py-8 mx-auto bg-primary text-primary-content rounded-box',
-  })
-  expect(
-    footerElement.findByProps({
-      className:
-        'flex items-center justify-center pt-10 font-light text-center sm:pt-12',
-    }).children[0]
-  ).toEqual(`© ${new Date().getFullYear()} ${brand}`)
 })
