@@ -71,7 +71,7 @@ const Button = ({
   text,
   size = 'no',
   shape = 'no',
-  color = 'no',
+  color = 'primary',
   effect = 'no',
   status = 'no',
   glass = 'no',

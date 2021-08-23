@@ -7,7 +7,7 @@ type Props = {
 }
 
 const Footer = ({ links, brand }: Props): JSX.Element => (
-  <footer className="w-full max-w-screen-xl px-4 py-8 mx-auto bg-neutral text-neutral-content rounded-box">
+  <footer className="w-full max-w-screen-xl px-4 py-8 mx-auto bg-primary text-primary-content rounded-box">
     {links && <UListLinks links={links} />}
     <Copyright brand={brand} />
   </footer>

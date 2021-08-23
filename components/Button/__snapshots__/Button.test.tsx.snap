@@ -2,7 +2,7 @@
 
 exports[`Button displays text 1`] = `
 <button
-  className="btn"
+  className="btn  btn-primary"
 >
   Push Me
 </button>
@@ -10,7 +10,7 @@ exports[`Button displays text 1`] = `
 
 exports[`Button displays text and is small 1`] = `
 <button
-  className="btn  btn-sm"
+  className="btn  btn-sm  btn-primary"
 >
   Push Me
 </button>
@@ -18,7 +18,7 @@ exports[`Button displays text and is small 1`] = `
 
 exports[`Button displays text and is small and wide 1`] = `
 <button
-  className="btn  btn-sm  btn-wide"
+  className="btn  btn-sm  btn-wide  btn-primary"
 >
   Push Me
 </button>

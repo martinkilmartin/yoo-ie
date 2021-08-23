@@ -9,7 +9,7 @@ test('Footer displays copyright with current year and brand', () => {
   const footerInstance = footerRenderer.root
   const footerElement = footerInstance.findByProps({
     className:
-      'w-full max-w-screen-xl px-4 py-8 mx-auto bg-neutral text-neutral-content rounded-box',
+      'w-full max-w-screen-xl px-4 py-8 mx-auto bg-primary text-primary-content rounded-box',
   })
   expect(
     footerElement.findByProps({
@@ -30,7 +30,7 @@ test('Footer displays links and copyright with current year and brand', () => {
   const footerInstance = footerRenderer.root
   const footerElement = footerInstance.findByProps({
     className:
-      'w-full max-w-screen-xl px-4 py-8 mx-auto bg-neutral text-neutral-content rounded-box',
+      'w-full max-w-screen-xl px-4 py-8 mx-auto bg-primary text-primary-content rounded-box',
   })
   expect(
     footerElement.findByProps({
