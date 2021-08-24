@@ -1,5 +1,9 @@
 import { GetStaticProps } from 'next'
 
+import { CSSTheme } from '../types'
+
+import { CSS_THEMES } from '../constants/cssThemes'
+
 import { Container } from '../layout/Container'
 import { HTMLHead } from '../components/HTMLHead'
 import { Navbar } from '../components/Navbar'
@@ -13,7 +17,7 @@ type Props = {
   heroTitle: string
   heroSpeel: string
   cta: string
-  footerLinks: string[]
+  cssThemes: CSSTheme[]
 }
 
 const Home = ({
@@ -23,10 +27,11 @@ const Home = ({
   heroTitle,
   heroSpeel,
   cta,
+  cssThemes,
 }: Props): JSX.Element => (
   <Container>
     <HTMLHead title={title} description={description} />
-    <Navbar brand={brand} />
+    <Navbar brand={brand} themes={cssThemes} />
     <Hero heading={heroTitle} description={heroSpeel} button={cta} />
     <Footer brand={brand} />
   </Container>
@@ -39,6 +44,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const heroTitle = 'Introducing Innovation In Irish Internet Industries'
   const heroSpeel = 'User Interfaces & eCommerce Integrations'
   const cta = 'Innovate Now'
+  const cssThemes = CSS_THEMES
 
   return {
     props: {
@@ -48,6 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
       heroTitle,
       heroSpeel,
       cta,
+      cssThemes,
     },
   }
 }
