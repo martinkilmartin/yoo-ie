@@ -19,12 +19,12 @@ type CSSThemeCupcake = {
 type CSSThemeBumblebee = {
   id: 'bumblebee'
   name: 'Bumblebee'
-  icon: '🧁'
+  icon: '🐝'
 }
 
 type CSSThemeEmerald = {
   id: 'emerald'
-  name: 'emerald'
+  name: 'Emerald'
   icon: '✳️'
 }
 
