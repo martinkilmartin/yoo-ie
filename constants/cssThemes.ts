@@ -99,7 +99,7 @@ export const CSS_THEMES: CSSTheme[] = [
 
   {
     id: 'wireframe',
-    name: ' Wireframe',
+    name: 'Wireframe',
     icon: '📝',
   },
 

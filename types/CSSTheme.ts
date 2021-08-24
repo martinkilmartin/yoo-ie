@@ -102,7 +102,7 @@ type CSSThemeFantasy = {
 
 type CSSThemeWireframe = {
   id: 'wireframe'
-  name: ' Wireframe'
+  name: 'Wireframe'
   icon: '📝'
 }
 
