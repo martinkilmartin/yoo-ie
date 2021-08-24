@@ -8,9 +8,6 @@ type Props = {
 
 const ThemeSelect = ({ themes }: Props): JSX.Element => (
   <select className="w-full max-w-xs select select-bordered select-primary text-base-content">
-    <option disabled={false} selected={true}>
-      Choose your theme
-    </option>
     {themes.map((theme, index) => (
       <ThemeSelectLink theme={theme} key={index} />
     ))}
