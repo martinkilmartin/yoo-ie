@@ -6,7 +6,7 @@ type Props = {
 
 const ThemeSelectLink = ({ theme }: Props): JSX.Element => (
   <option tabIndex={0} data-set-theme={theme.id} data-act-class="active">
-    {theme.name}
+    {theme.icon} {theme.name}
   </option>
 )
 
