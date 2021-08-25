@@ -6,9 +6,9 @@ import { CodeMockup } from '../Mockups'
 type Props = {
   bgImageData?: StaticImageData
   bgImageAlt?: string
-  heading: string
+  heading?: string
+  codeLines?: string[]
   description?: string
-  codedView?: boolean
   button?: string
 }
 
@@ -17,7 +17,7 @@ const Hero = ({
   bgImageAlt,
   heading,
   description,
-  codedView = false,
+  codeLines,
   button,
 }: Props): JSX.Element => (
   <div className="min-h-16 hero bg-base-200">
@@ -33,8 +33,8 @@ const Hero = ({
     )}
     <div className="text-center hero-content text-neutral-content">
       <div className="max-w-full">
-        {codedView ? (
-          <CodeMockup lines={[heading]} />
+        {codeLines?.length ? (
+          <CodeMockup lines={codeLines} />
         ) : (
           <h1 className="mb-5 text-5xl font-bold">{heading}</h1>
         )}

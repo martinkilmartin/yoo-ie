@@ -17,7 +17,7 @@ type Props = {
   baseURL: string
   title: string
   brand: string
-  heroTitle: string
+  heroCodeLines: string[]
   description: string
   cssThemes: CSSTheme[]
 }
@@ -26,7 +26,7 @@ const Home = ({
   baseURL,
   title,
   brand,
-  heroTitle,
+  heroCodeLines,
   description,
   cssThemes,
 }: Props): JSX.Element => (
@@ -38,7 +38,7 @@ const Home = ({
       baseURL={baseURL}
     />
     <Navbar logo={<SionnachSolutionsLogo />} brand={brand} themes={cssThemes} />
-    <Hero bgImageData={heroBGImage} heading={heroTitle} codedView={true} />
+    <Hero bgImageData={heroBGImage} codeLines={heroCodeLines} />
     <Footer brand={brand} />
   </Container>
 )
@@ -47,7 +47,10 @@ export const getStaticProps: GetStaticProps = async () => {
   const baseURL = 'sionnach.solutions'
   const title = 'Sionnach Solutions a.k.a. Sionnach Buí'
   const brand = 'Sionnach Solutions'
-  const heroTitle = 'Introducing Innovation In Irish Internet Industries'
+  const heroCodeLines = [
+    'Introducing Innovation In',
+    'Irish Internet Industries',
+  ]
   const description = 'Introducing Innovation In Irish Internet Industries'
   const cssThemes = CSS_THEMES
 
@@ -56,7 +59,7 @@ export const getStaticProps: GetStaticProps = async () => {
       baseURL,
       title,
       brand,
-      heroTitle,
+      heroCodeLines,
       description,
       cssThemes,
     },
