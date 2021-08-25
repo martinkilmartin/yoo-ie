@@ -47,7 +47,7 @@ const HTMLHead = ({
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:site_name" content="PWA App" />
+    <meta property="og:site_name" content={appName} />
     <meta property="og:url" content={`https://${baseURL}`} />
     <meta
       property="og:image"
