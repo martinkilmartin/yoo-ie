@@ -4,6 +4,8 @@ import { CSSTheme } from '../types'
 
 import { CSS_THEMES } from '../constants/cssThemes'
 
+import heroBGImage from '../public/img/bg/simple-software-solutions-2844x1600.jpg'
+
 import { Container } from '../layout/Container'
 import { HTMLHead } from '../components/HTMLHead'
 import { Navbar } from '../components/Navbar'
@@ -29,7 +31,7 @@ const Home = ({
   <Container>
     <HTMLHead title={title} description={description} />
     <Navbar logo={<SionnachSolutionsLogo />} brand={brand} themes={cssThemes} />
-    <Hero heading={heroTitle} />
+    <Hero bgImageData={heroBGImage} heading={heroTitle} />
     <Footer brand={brand} />
   </Container>
 )
