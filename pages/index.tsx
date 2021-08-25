@@ -16,22 +16,22 @@ import { Footer } from '../components/Footer'
 type Props = {
   title: string
   brand: string
-  description: string
   heroTitle: string
+  description: string
   cssThemes: CSSTheme[]
 }
 
 const Home = ({
   title,
   brand,
-  description,
   heroTitle,
+  description,
   cssThemes,
 }: Props): JSX.Element => (
   <Container>
     <HTMLHead title={title} description={description} />
     <Navbar logo={<SionnachSolutionsLogo />} brand={brand} themes={cssThemes} />
-    <Hero bgImageData={heroBGImage} heading={heroTitle} />
+    <Hero bgImageData={heroBGImage} heading={heroTitle} codedView={true} />
     <Footer brand={brand} />
   </Container>
 )
@@ -39,16 +39,16 @@ const Home = ({
 export const getStaticProps: GetStaticProps = async () => {
   const title = 'Sionnach Solutions a.k.a. Sionnach Buí'
   const brand = 'Sionnach Solutions'
-  const description = 'Introducing Innovation In Irish Internet Industries'
   const heroTitle = 'Introducing Innovation In Irish Internet Industries'
+  const description = 'Introducing Innovation In Irish Internet Industries'
   const cssThemes = CSS_THEMES
 
   return {
     props: {
       title,
       brand,
-      description,
       heroTitle,
+      description,
       cssThemes,
     },
   }
