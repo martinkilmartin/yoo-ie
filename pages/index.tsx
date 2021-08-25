@@ -4,7 +4,7 @@ import { CSSTheme } from '../types'
 
 import { CSS_THEMES } from '../constants/cssThemes'
 
-import heroBGImage from '../public/img/bg/simple-software-solutions-2844x1600.jpg'
+import heroBGImage from '../public/img/bg/simple-software-solutions-2400w.jpg'
 
 import { Container } from '../layout/Container'
 import { HTMLHead } from '../components/HTMLHead'
@@ -14,6 +14,7 @@ import { Hero } from '../components/Hero'
 import { Footer } from '../components/Footer'
 
 type Props = {
+  baseURL: string
   title: string
   brand: string
   heroTitle: string
@@ -22,6 +23,7 @@ type Props = {
 }
 
 const Home = ({
+  baseURL,
   title,
   brand,
   heroTitle,
@@ -29,7 +31,12 @@ const Home = ({
   cssThemes,
 }: Props): JSX.Element => (
   <Container>
-    <HTMLHead title={title} description={description} />
+    <HTMLHead
+      title={title}
+      description={description}
+      appName={brand}
+      baseURL={baseURL}
+    />
     <Navbar logo={<SionnachSolutionsLogo />} brand={brand} themes={cssThemes} />
     <Hero bgImageData={heroBGImage} heading={heroTitle} codedView={true} />
     <Footer brand={brand} />
@@ -37,6 +44,7 @@ const Home = ({
 )
 
 export const getStaticProps: GetStaticProps = async () => {
+  const baseURL = 'sionnach.solutions'
   const title = 'Sionnach Solutions a.k.a. Sionnach Buí'
   const brand = 'Sionnach Solutions'
   const heroTitle = 'Introducing Innovation In Irish Internet Industries'
@@ -45,6 +53,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
+      baseURL,
       title,
       brand,
       heroTitle,
