@@ -7,6 +7,7 @@ import { CSS_THEMES } from '../constants/cssThemes'
 import { Container } from '../layout/Container'
 import { HTMLHead } from '../components/HTMLHead'
 import { Navbar } from '../components/Navbar'
+import { SionnachSolutionsLogo } from '../components/SVG'
 import { Hero } from '../components/Hero'
 import { Footer } from '../components/Footer'
 
@@ -15,8 +16,6 @@ type Props = {
   brand: string
   description: string
   heroTitle: string
-  heroSpeel: string
-  cta: string
   cssThemes: CSSTheme[]
 }
 
@@ -25,14 +24,12 @@ const Home = ({
   brand,
   description,
   heroTitle,
-  heroSpeel,
-  cta,
   cssThemes,
 }: Props): JSX.Element => (
   <Container>
     <HTMLHead title={title} description={description} />
-    <Navbar brand={brand} themes={cssThemes} />
-    <Hero heading={heroTitle} description={heroSpeel} button={cta} />
+    <Navbar logo={<SionnachSolutionsLogo />} brand={brand} themes={cssThemes} />
+    <Hero heading={heroTitle} />
     <Footer brand={brand} />
   </Container>
 )
@@ -42,8 +39,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const brand = 'Sionnach Solutions'
   const description = 'Introducing Innovation In Irish Internet Industries'
   const heroTitle = 'Introducing Innovation In Irish Internet Industries'
-  const heroSpeel = 'User Interfaces & eCommerce Integrations'
-  const cta = 'Innovate Now'
   const cssThemes = CSS_THEMES
 
   return {
@@ -52,8 +47,6 @@ export const getStaticProps: GetStaticProps = async () => {
       brand,
       description,
       heroTitle,
-      heroSpeel,
-      cta,
       cssThemes,
     },
   }
