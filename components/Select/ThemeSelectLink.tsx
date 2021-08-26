@@ -4,10 +4,12 @@ type Props = {
   theme: CSSTheme
 }
 
-const ThemeSelectLink = ({ theme }: Props): JSX.Element => (
-  <option tabIndex={0} data-set-theme={theme.id} data-act-class="active">
-    {theme.icon} {theme.name}
-  </option>
-)
+const ThemeSelectLink = ({ theme }: Props): JSX.Element => {
+  return (
+    <option value={theme.id}>
+      {theme.icon} {theme.name}
+    </option>
+  )
+}
 
 export default ThemeSelectLink

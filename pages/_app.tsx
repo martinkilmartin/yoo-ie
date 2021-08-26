@@ -1,11 +1,11 @@
 import type { AppProps, NextWebVitalsMetric } from 'next/app'
-import { ReactElement, useEffect } from 'react'
+import { useEffect } from 'react'
 const ThemeChange = require('theme-change')
 const { themeChange } = ThemeChange
 
 import 'tailwindcss/tailwind.css'
 
-function MyApp({ Component, pageProps }: AppProps): ReactElement<any, any> {
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   useEffect(() => {
     themeChange(false)
   }, [])
