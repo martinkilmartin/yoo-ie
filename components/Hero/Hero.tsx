@@ -33,11 +33,8 @@ const Hero = ({
     )}
     <div className="text-center hero-content text-neutral-content">
       <div className="max-w-full">
-        {codeLines?.length ? (
-          <CodeMockup lines={codeLines} />
-        ) : (
-          <h1 className="mb-5 text-5xl font-bold">{heading}</h1>
-        )}
+        {heading && <h1 className="mb-5 text-5xl font-bold">{heading}</h1>}
+        {codeLines?.length && <CodeMockup lines={codeLines} />}
         {description && <p className="mb-5">{description}</p>}
         {button && <Button text={button} />}
       </div>
