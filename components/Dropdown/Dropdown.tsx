@@ -44,7 +44,7 @@ const Dropdown = ({
         OPEN[open]
       )}
     >
-      <div tabIndex={0} className="m-1 btn">
+      <div tabIndex={0} className="m-1 btn btn-secondary">
         {title}
       </div>
       <ul
