@@ -1,12 +1,9 @@
-import { CSSTheme } from '../../types'
-
 import { Dropdown } from '../Dropdown'
 import { ThemeChangeListLinks } from '../ListLinks'
 
 type Props = {
   logo?: JSX.Element
   brand: string
-  themes: CSSTheme[]
 }
 
 const Navbar = ({ logo, brand }: Props): JSX.Element => (

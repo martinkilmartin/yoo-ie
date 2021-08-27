@@ -1,9 +1,5 @@
 import { GetStaticProps } from 'next'
 
-import { CSSTheme } from '../types'
-
-import { CSS_THEMES } from '../constants/cssThemes'
-
 import heroBGImage from '../public/img/bg/simple-software-solutions-2400w.jpg'
 
 import { Container } from '../layout/Container'
@@ -19,7 +15,6 @@ type Props = {
   brand: string
   heroCodeLines: string[]
   description: string
-  cssThemes: CSSTheme[]
 }
 
 const Home = ({
@@ -28,7 +23,6 @@ const Home = ({
   brand,
   heroCodeLines,
   description,
-  cssThemes,
 }: Props): JSX.Element => (
   <Container>
     <HTMLHead
@@ -37,7 +31,7 @@ const Home = ({
       appName={brand}
       baseURL={baseURL}
     />
-    <Navbar logo={<SionnachSolutionsLogo />} brand={brand} themes={cssThemes} />
+    <Navbar logo={<SionnachSolutionsLogo />} brand={brand} />
     <Hero bgImageData={heroBGImage} codeLines={heroCodeLines} />
     <Footer brand={brand} />
   </Container>
@@ -52,7 +46,6 @@ export const getStaticProps: GetStaticProps = async () => {
     'Irish Internet Industries',
   ]
   const description = 'Introducing Innovation In Irish Internet Industries'
-  const cssThemes = CSS_THEMES
 
   return {
     props: {
@@ -61,7 +54,6 @@ export const getStaticProps: GetStaticProps = async () => {
       brand,
       heroCodeLines,
       description,
-      cssThemes,
     },
   }
 }
