@@ -1,6 +1,6 @@
 import { CSSTheme } from '../../types'
 
-import ThemeSelectLink from './ThemeSelectLink'
+import ThemeSelectLink from './ThemeSelectOption'
 
 type Props = {
   themes: CSSTheme[]

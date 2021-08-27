@@ -4,7 +4,7 @@ type Props = {
   theme: CSSTheme
 }
 
-const ThemeSelectLink = ({ theme }: Props): JSX.Element => {
+const ThemeSelectOption = ({ theme }: Props): JSX.Element => {
   return (
     <option value={theme.id}>
       {theme.icon} {theme.name}
@@ -12,4 +12,4 @@ const ThemeSelectLink = ({ theme }: Props): JSX.Element => {
   )
 }
 
-export default ThemeSelectLink
+export default ThemeSelectOption
