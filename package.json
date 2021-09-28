@@ -2,9 +2,9 @@
   "name": "sionnach.solutions",
   "version": "0.1.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "doppler run -- next dev",
+    "build": "doppler run -- next build",
+    "start": "doppler run -- next start",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
@@ -13,6 +13,8 @@
     "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "dependencies": {
+    "@logtail/js": "^0.1.10",
+    "@logtail/types": "^0.1.8",
     "@tailwindcss/typography": "^0.4.1",
     "clsx": "^1.1.1",
     "daisyui": "^1.14.0",
