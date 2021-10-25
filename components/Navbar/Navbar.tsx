@@ -1,5 +1,4 @@
-import { Dropdown } from '../Dropdown'
-import { ThemeChangeListLinks } from '../ListLinks'
+import { ThemeToggle } from '../Button'
 
 type Props = {
   logo?: JSX.Element
@@ -13,9 +12,7 @@ const Navbar = ({ logo, brand }: Props): JSX.Element => (
       <span className="text-lg font-bold">{brand}</span>
     </div>
     <div className="flex-none">
-      <Dropdown align="end">
-        <ThemeChangeListLinks />
-      </Dropdown>
+      <ThemeToggle />
     </div>
   </div>
 )
