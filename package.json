@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "doppler run -- next dev",
+    "dev-build": "doppler run -- next build",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --pretty --noEmit",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
+    "@next/eslint-plugin-next": "^11.1.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.24",
