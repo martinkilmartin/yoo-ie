@@ -18,9 +18,9 @@
     "@logtail/types": "^0.1.8",
     "@tailwindcss/typography": "^0.4.1",
     "clsx": "^1.1.1",
-    "daisyui": "^1.14.0",
+    "daisyui": "^1.16.0",
     "next": "latest",
-    "next-pwa": "^5.3.1",
+    "next-pwa": "^5.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sendpulse-api": "^1.1.5",
@@ -57,7 +57,8 @@
     "react-test-renderer": "^17.0.2",
     "tailwindcss": "^2.2.7",
     "ts-node": "^10.1.0",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "webpack": "^5.60.0"
   },
   "license": "MIT",
   "husky": {
