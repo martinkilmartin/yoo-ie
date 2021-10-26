@@ -1,10 +1,8 @@
 import { GetStaticProps } from 'next'
 
-import heroBGImage from '../public/img/bg/simple-software-solutions-2400w.jpg'
-
 import { Container } from '../layout/Container'
 import { Page } from '../layout/Page'
-import { Hero } from '../components/Hero'
+import { Contact } from '../layout/Contact'
 
 type Props = {
   baseURL: string
@@ -16,7 +14,7 @@ type Props = {
 const Home = ({ baseURL, title, brand, heading }: Props): JSX.Element => (
   <Container>
     <Page baseURL={baseURL} title={title} brand={brand} heading={heading}>
-      <Hero bgImageData={heroBGImage} heading={heading} />
+      <Contact />
     </Page>
   </Container>
 )
