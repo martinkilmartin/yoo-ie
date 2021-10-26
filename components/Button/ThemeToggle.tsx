@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import { Sun, Moon } from '../SVG'
+
 type Props = {
   a?: string
   b?: string
@@ -14,7 +16,7 @@ const ThemeToggle = ({ a = 'dark', b = 'light' }: Props): JSX.Element => {
       data-act-class="ACTIVECLASS"
       onClick={toggleTheme}
     >
-      {theme ? '🌞' : '🌚'}
+      {theme ? <Sun /> : <Moon />}
     </button>
   )
 }
