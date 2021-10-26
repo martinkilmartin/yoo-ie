@@ -7,7 +7,7 @@ const TextArea = ({ title, placeholder }: Props): JSX.Element => (
   <div className="form-control">
     {title && (
       <label className="label">
-        <span className="label-text">{title}</span>
+        <span>{title}</span>
       </label>
     )}
     <textarea

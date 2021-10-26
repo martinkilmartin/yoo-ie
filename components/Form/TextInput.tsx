@@ -5,14 +5,16 @@ type Props = {
 
 const TextInput = ({ title, placeholder }: Props): JSX.Element => (
   <div className="form-control">
-    <label className="input-group">
-      {title && <span>{title}</span>}
-      <input
-        type="text"
-        placeholder={placeholder}
-        className="input input-bordered input-primary text-base-content"
-      />
-    </label>
+    {title && (
+      <label className="label">
+        <span>{title}</span>{' '}
+      </label>
+    )}
+    <input
+      type="text"
+      placeholder={placeholder}
+      className="input input-primary input-bordered"
+    />
   </div>
 )
 

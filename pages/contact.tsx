@@ -9,12 +9,19 @@ type Props = {
   title: string
   brand: string
   heading: string
+  contact: string
 }
 
-const Home = ({ baseURL, title, brand, heading }: Props): JSX.Element => (
+const Home = ({
+  baseURL,
+  title,
+  brand,
+  heading,
+  contact,
+}: Props): JSX.Element => (
   <Container>
     <Page baseURL={baseURL} title={title} brand={brand} heading={heading}>
-      <Contact />
+      <Contact contact={contact} />
     </Page>
   </Container>
 )
@@ -24,6 +31,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const title = 'Sionnach Solutions a.k.a. Sionnach Buí'
   const brand = 'Sionnach Solutions'
   const heading = 'Introducing Innovation In Irish Internet Industries'
+  const contact = 'info@sionnach.solutions'
 
   return {
     props: {
@@ -31,6 +39,7 @@ export const getStaticProps: GetStaticProps = async () => {
       title,
       brand,
       heading,
+      contact,
     },
   }
 }
