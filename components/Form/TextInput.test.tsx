@@ -13,7 +13,7 @@ test('TextInput displays label and text-input', () => {
   expect(textInputInstance.findByType('span').children[0]).toEqual(title)
   expect(
     textInputInstance.findByProps({
-      className: 'input input-bordered input-primary text-base-content',
+      className: 'input input-primary input-bordered',
     }).props.placeholder
   ).toEqual(placeholder)
 })

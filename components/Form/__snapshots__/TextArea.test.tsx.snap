@@ -7,9 +7,7 @@ exports[`TextArea displays label and text-area-input 1`] = `
   <label
     className="label"
   >
-    <span
-      className="label-text"
-    >
+    <span>
       Message
     </span>
   </label>

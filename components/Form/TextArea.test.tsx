@@ -10,11 +10,7 @@ test('TextArea displays label and text-area-input', () => {
   const tree = textAreaRenderer.toJSON()
   expect(tree).toMatchSnapshot()
   const textAreaInstance = textAreaRenderer.root
-  expect(
-    textAreaInstance.findByProps({
-      className: 'label-text',
-    }).children[0]
-  ).toEqual(title)
+  expect(textAreaInstance.findByType('span').children[0]).toEqual(title)
   expect(
     textAreaInstance.findByProps({
       className: 'h-24 textarea textarea-bordered textarea-primary',

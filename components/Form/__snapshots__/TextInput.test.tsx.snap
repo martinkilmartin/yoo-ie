@@ -5,16 +5,17 @@ exports[`TextInput displays label and text-input 1`] = `
   className="form-control"
 >
   <label
-    className="input-group"
+    className="label"
   >
     <span>
       Email
     </span>
-    <input
-      className="input input-bordered input-primary text-base-content"
-      placeholder="info@sionnach.solutions"
-      type="text"
-    />
+     
   </label>
+  <input
+    className="input input-primary input-bordered"
+    placeholder="info@sionnach.solutions"
+    type="text"
+  />
 </div>
 `;
