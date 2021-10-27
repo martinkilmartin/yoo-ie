@@ -7,19 +7,19 @@ const API_SECRET = process.env.NEXT_PUBLIC_SENDPULSE_SECRET
 const TOKEN_STORAGE = '/tmp/'
 
 const SendPulse = (request: VercelRequest, response: VercelResponse): void => {
-  const { message, name, email } = request.query
+  const { message = '', email = '' } = request.query
   if (message.length && email.length) {
     sendpulse.init(API_USER_ID, API_SECRET, TOKEN_STORAGE, function () {
       const returnResponseData = function (data: any) {
         response.status(200).send(data)
       }
       const emailData = {
-        html: `<p>${message}</p>`,
-        text: message,
+        html: `<p>${message}</p><p>${email}</p>`,
+        text: `${message}+${email}`,
         subject: 'Website Enquiry',
         from: {
-          name: name,
-          email: email,
+          name: 'Sionnach Solutions a.k.a. Sionnach Buí',
+          email: 'info@sionnach.solutions',
         },
         to: [
           {
