@@ -1,4 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node'
+import { Logtail } from '@logtail/node'
 
 const sendpulse = require('sendpulse-api')
 
@@ -6,12 +7,17 @@ const API_USER_ID = process.env.NEXT_PUBLIC_SENDPULSE_ID
 const API_SECRET = process.env.NEXT_PUBLIC_SENDPULSE_SECRET
 const TOKEN_STORAGE = '/tmp/'
 
+const LOGTAIL_SOURCE_TOKEN = process.env.NEXT_PUBLIC_LOGTAIL_SOURCE_TOKEN || ''
+
+const logtail = new Logtail(LOGTAIL_SOURCE_TOKEN)
+
 const history: any = {}
 
 const rateLimit = (ip: string | string[], timeout = 60 * 1000) => {
   if (Array.isArray(ip)) {
     ip = ip[0]
   }
+  logtail.info('ip', { ip: ip })
   if (history[ip] > Date.now() - timeout) {
     throw new Error('Rate Limit Exceeded')
   }
