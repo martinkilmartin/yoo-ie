@@ -7,34 +7,34 @@ const API_SECRET = process.env.NEXT_PUBLIC_SENDPULSE_SECRET
 const TOKEN_STORAGE = '/tmp/'
 
 const SendPulse = (request: VercelRequest, response: VercelResponse): void => {
-  sendpulse.init(API_USER_ID, API_SECRET, TOKEN_STORAGE, function () {
-    const returnResponseData = function (data: any) {
-      response.status(200).send(data)
-    }
-
-    const email = {
-      html: '<h1>Example text</h1>',
-      text: 'Example text',
-      subject: 'Example subject',
-      from: {
-        name: 'Sionnach Buí',
-        email: 'info@sionnach.solutions',
-      },
-      to: [
-        {
-          name: 'Martin',
-          email: 'martinkilmartin@gmail.com',
+  const { message, name, email } = request.query
+  if (message.length && email.length) {
+    sendpulse.init(API_USER_ID, API_SECRET, TOKEN_STORAGE, function () {
+      const returnResponseData = function (data: any) {
+        response.status(200).send(data)
+      }
+      const emailData = {
+        html: `<p>${message}</p>`,
+        text: message,
+        subject: 'Website Enquiry',
+        from: {
+          name: name,
+          email: email,
         },
-      ],
-      bcc: [
-        {
-          name: 'Marty',
-          email: 'martymcfly@duck.com',
-        },
-      ],
-    }
-    sendpulse.smtpSendMail(returnResponseData, email)
-  })
+        to: [
+          {
+            name: 'Sionnach Solutions a.k.a. Sionnach Buí',
+            email: 'info@sionnach.solutions',
+          },
+        ],
+      }
+      sendpulse.smtpSendMail(returnResponseData, emailData)
+    })
+  } else {
+    response
+      .status(400)
+      .send({ messageLength: message.length, emailLength: email.length })
+  }
 }
 
 export default SendPulse
