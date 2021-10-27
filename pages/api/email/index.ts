@@ -17,7 +17,7 @@ const rateLimit = (ip: string | string[], timeout = 60 * 1000) => {
   if (Array.isArray(ip)) {
     ip = ip[0]
   }
-  logtail.info('ip', { ip: ip })
+  logtail.info(ip)
   if (history[ip] > Date.now() - timeout) {
     throw new Error('Rate Limit Exceeded')
   }
@@ -29,6 +29,7 @@ const SendPulse = async (
   response: VercelResponse
 ): Promise<void> => {
   try {
+    logtail.info(JSON.stringify(request))
     rateLimit(request.headers['x-real-ip'] || ['0.0.0.0'], 10 * 60 * 1000)
     const { message = '', email = '' } = request.query
     await SendEmail(response, message, email)
