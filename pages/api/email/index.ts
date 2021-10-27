@@ -29,7 +29,6 @@ const SendPulse = async (
   response: VercelResponse
 ): Promise<void> => {
   try {
-    logtail.info(JSON.stringify(request))
     rateLimit(request.headers['x-real-ip'] || ['0.0.0.0'], 10 * 60 * 1000)
     const { message = '', email = '' } = request.query
     await SendEmail(response, message, email)
