@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node'
-import { Logtail } from '@logtail/node'
+const { Node: Logtail } = require('@logtail/js')
 
 const sendpulse = require('sendpulse-api')
 
