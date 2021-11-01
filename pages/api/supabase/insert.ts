@@ -3,9 +3,10 @@ import { createClient } from '@supabase/supabase-js'
 
 const OPTIONS = {}
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-const SUPABASE_SECRET_KEY = process.env.NEXT_PUBLIC_SUPABASE_SECRET_KEY || ''
+const SUPABASE_PUBLIC_ANON_KEY =
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLIC_ANON_KEY || ''
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_SECRET_KEY, OPTIONS)
+const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLIC_ANON_KEY, OPTIONS)
 
 const Insert = async (
   _req: NextApiRequest,
