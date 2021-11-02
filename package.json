@@ -14,8 +14,6 @@
     "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "dependencies": {
-    "@logtail/js": "^0.1.10",
-    "@logtail/types": "^0.1.8",
     "@tailwindcss/typography": "^0.4.1",
     "clsx": "^1.1.1",
     "daisyui": "^1.16.0",
