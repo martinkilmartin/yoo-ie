@@ -166,7 +166,7 @@ export default {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.(ts|tsx)$': 'babel-jest',
+    '^.+\\.(ts|tsx)$': ['babel-jest', { configFile: './babel.jest.config.js' }],
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
