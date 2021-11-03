@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server'
 export interface RateLimitContextBase {
   id: string
   limit: number
-  duration: number
+  timeframe: number
   count: CountFn
 }
 
@@ -64,10 +64,10 @@ const rateLimited: OnRateLimit = ({ id }) => {
 }
 
 async function rateLimit(context: RateLimitContext) {
-  const { headers, id, limit, duration, count, onRateLimit } = context
+  const { headers, id, limit, timeframe, count, onRateLimit } = context
 
   const start = Date.now()
-  const time = Math.floor(Date.now() / 1000 / duration)
+  const time = Math.floor(Date.now() / 1000 / timeframe)
   const key = `${id}:${time}`
   let countOrRes: number | Response
 
@@ -81,7 +81,7 @@ async function rateLimit(context: RateLimitContext) {
 
   const h = countOrRes instanceof Response ? countOrRes.headers : new Headers()
   const remaining = countOrRes instanceof Response ? 0 : limit - countOrRes
-  const reset = (time + 1) * duration
+  const reset = (time + 1) * timeframe
 
   const latency = Date.now() - start
   h.set('x-upstash-latency', `${latency}`)
