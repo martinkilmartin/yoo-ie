@@ -1,8 +1,6 @@
 import type { NextApiRequest } from 'next'
 
-export default function getIP(
-  request: Request | NextApiRequest
-): string | string[] | null | undefined {
+export default function getIP(request: Request | NextApiRequest): string {
   const xff =
     request instanceof Request
       ? request.headers.get('x-forwarded-for')
