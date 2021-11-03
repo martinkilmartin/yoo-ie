@@ -1,12 +1,13 @@
 import { initRateLimit, CountFn } from './rate-limit'
 import getIP from './get-ip'
 import { upstashRest } from './upstash'
+import { IP_LIMIT_QUANTITY, IP_LIMIT_DURATION } from '@constants/IP_LIMIT'
 
 export const ipRateLimit = initRateLimit((request) => ({
   id: `ip:${getIP(request)}`,
   count: increment,
-  limit: 5,
-  duration: 10,
+  limit: IP_LIMIT_QUANTITY,
+  duration: IP_LIMIT_DURATION,
 }))
 
 const increment: CountFn = async ({ key, duration }) => {

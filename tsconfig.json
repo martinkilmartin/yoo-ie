@@ -17,7 +17,8 @@
     "incremental": true,
     "paths": {
       "@lib/*": ["lib/*"],
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@constants/*": ["constants/*"]
     }
   },
   "exclude": ["node_modules", ".next", "out"],
