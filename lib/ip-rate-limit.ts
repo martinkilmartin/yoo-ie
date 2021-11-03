@@ -6,14 +6,14 @@ export const ipRateLimit = initRateLimit((request) => ({
   id: `ip:${getIP(request)}`,
   count: increment,
   limit: 5,
-  timeframe: 10,
+  duration: 10,
 }))
 
-const increment: CountFn = async ({ key, timeframe }) => {
+const increment: CountFn = async ({ key, duration }) => {
   const results = await upstashRest(
     [
       ['INCR', key],
-      ['EXPIRE', key, timeframe],
+      ['EXPIRE', key, duration],
     ],
     { pipeline: true }
   )
