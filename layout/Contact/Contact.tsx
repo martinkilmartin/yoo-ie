@@ -2,16 +2,26 @@ import { TextArea, TextInput } from '../../components/Form'
 import { Button } from '../../components/Button'
 
 type Props = {
-  contact: string
+  messageTitle: string
+  messagePlaceholder: string
+  contactTitle: string
+  contactPlaceholder: string
+  buttonText: string
 }
 
-const Contact = ({ contact }: Props): JSX.Element => (
+const Contact = ({
+  messageTitle,
+  messagePlaceholder,
+  contactTitle,
+  contactPlaceholder,
+  buttonText,
+}: Props): JSX.Element => (
   <div className="justify-center max-w-full shadow-2xl card bg-base-100 hero-content">
     <div className="card-body">
-      <TextArea title="Message" placeholder="Enter your query here" />
-      <TextInput title="Email" placeholder={contact} />
+      <TextArea title={messageTitle} placeholder={messagePlaceholder} />
+      <TextInput title={contactTitle} placeholder={contactPlaceholder} />
       <div className="mt-6 form-control">
-        <Button text="Send" />
+        <Button text={buttonText} />
       </div>
     </div>
   </div>

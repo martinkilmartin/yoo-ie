@@ -6,6 +6,10 @@ Website for Sionnach Solutions / Sionnach Buí
 
 `yarn dev`
 
+## Run prod build in dev environment
+
+`yarn dev-build`
+
 ## Run prod build
 
 `yarn build`

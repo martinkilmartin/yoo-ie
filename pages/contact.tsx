@@ -9,7 +9,11 @@ type Props = {
   title: string
   brand: string
   heading: string
-  contact: string
+  messageTitle: string
+  messagePlaceholder: string
+  contactTitle: string
+  contactPlaceholder: string
+  buttonText: string
 }
 
 const Home = ({
@@ -17,21 +21,35 @@ const Home = ({
   title,
   brand,
   heading,
-  contact,
+  messageTitle,
+  messagePlaceholder,
+  contactTitle,
+  contactPlaceholder,
+  buttonText,
 }: Props): JSX.Element => (
   <Container>
     <Page baseURL={baseURL} title={title} brand={brand} heading={heading}>
-      <Contact contact={contact} />
+      <Contact
+        messageTitle={messageTitle}
+        messagePlaceholder={messagePlaceholder}
+        contactTitle={contactTitle}
+        contactPlaceholder={contactPlaceholder}
+        buttonText={buttonText}
+      />
     </Page>
   </Container>
 )
 
 export const getStaticProps: GetStaticProps = async () => {
   const baseURL = 'sionnach.solutions'
-  const title = 'Sionnach Solutions a.k.a. Sionnach Buí'
+  const title = 'Send us a message'
   const brand = 'Sionnach Solutions'
   const heading = 'Introducing Innovation In Irish Internet Industries'
-  const contact = 'info@sionnach.solutions'
+  const messageTitle = 'Message'
+  const messagePlaceholder = 'Enter your message here'
+  const contactTitle = 'Email'
+  const contactPlaceholder = 'your@email.address'
+  const buttonText = 'Send'
 
   return {
     props: {
@@ -39,7 +57,11 @@ export const getStaticProps: GetStaticProps = async () => {
       title,
       brand,
       heading,
-      contact,
+      messageTitle,
+      messagePlaceholder,
+      contactTitle,
+      contactPlaceholder,
+      buttonText,
     },
   }
 }
