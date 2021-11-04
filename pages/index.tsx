@@ -2,9 +2,9 @@ import { GetStaticProps } from 'next'
 
 import heroBGImage from '../public/img/bg/simple-software-solutions-2400w.jpg'
 
-import { Container } from '../layout/Container'
-import { Page } from '../layout/Page'
-import { Hero } from '../components/Hero'
+import { Container } from '@layouts/Container'
+import { Page } from '@layouts/Page'
+import { Hero } from '@components/Hero'
 
 type Props = {
   baseURL: string
