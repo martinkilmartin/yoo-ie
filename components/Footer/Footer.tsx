@@ -1,4 +1,7 @@
-import { Copyright } from '../Copyright'
+import { FooterLinks } from '@components/Footer'
+import { Copyright } from '@components/Copyright'
+
+import { FOOTER_LINKS } from '@constants/FOOTER_LINKS'
 
 type Props = {
   brand: string
@@ -6,6 +9,7 @@ type Props = {
 
 const Footer = ({ brand }: Props): JSX.Element => (
   <footer className="p-10 footer bg-primary text-primary-content footer-center">
+    <FooterLinks links={FOOTER_LINKS} />
     <div>
       <Copyright brand={brand} />
     </div>
