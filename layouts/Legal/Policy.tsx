@@ -14,7 +14,7 @@ type Props = {
 }
 
 const Policy = ({ title, paragraphs }: Props): JSX.Element => (
-  <div className="px-4 bg-neutral-content">
+  <div className="px-4">
     <h2 className="w-full text-3xl font-extrabold leading-9">{title}</h2>
     <div className="flex flex-col mx-auto">
       <dl className="w-full">
