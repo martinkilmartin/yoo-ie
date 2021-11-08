@@ -19,7 +19,8 @@
       "@lib/*": ["lib/*"],
       "@layouts/*": ["layouts/*"],
       "@components/*": ["components/*"],
-      "@constants/*": ["constants/*"]
+      "@constants/*": ["constants/*"],
+      "@img/*": ["public/img/*"]
     }
   },
   "exclude": ["node_modules", ".next", "out"],

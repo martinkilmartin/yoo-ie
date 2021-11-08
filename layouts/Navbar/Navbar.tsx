@@ -1,5 +1,4 @@
-import { ThemeToggle } from '../Button'
-import Link from 'next/link'
+import { ThemeToggle } from '@components/Button'
 
 type Props = {
   logo?: JSX.Element
@@ -10,9 +9,8 @@ const Navbar = ({ logo, brand }: Props): JSX.Element => (
   <div className="mb-2 shadow-lg navbar bg-primary text-primary-content rounded-box">
     {logo && (
       <div className="flex-none">
-        <Link href="/">
-          <a>{logo}</a>
-        </Link>
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a href="/">{logo}</a>
       </div>
     )}
     <div className="flex-1 px-2 mx-2">

@@ -37,7 +37,7 @@ export default {
   // coverageReporters: [
   //   "json",
   //   "text",
-  //   "lcov",
+  //   "loch",
   //   "clover"
   // ],
 
@@ -78,7 +78,15 @@ export default {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    '^@layouts/(.*)$': '<rootDir>/layouts/$1',
+    '^@lib/(.*)$': '<rootDir>/lib/$1',
+    '^@components/(.*)$': '<rootDir>/components/$1',
+    '^@constants/(.*)$': '<rootDir>/constants/$1',
+    '^@img/(.*)$': '<rootDir>/public/img/$1',
+    '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
+    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -129,7 +137,7 @@ export default {
   // slowTestThreshold: 5,
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
-  // snapshotSerializers: [],
+  // snapshotSerializer: [],
 
   // The test environment that will be used for testing
   testEnvironment: 'jsdom',
@@ -187,8 +195,4 @@ export default {
     'jest-watch-typeahead/filename',
     'jest-watch-typeahead/testname',
   ],
-  moduleNameMapper: {
-    '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
-    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
-  },
 }

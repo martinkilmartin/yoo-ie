@@ -1,10 +1,10 @@
 import { ReactNode } from 'react'
 
-import { Container } from '../Container'
-import { HTMLHead } from '../../components/HTMLHead'
-import { Navbar } from '../../components/Navbar'
-import { SionnachSolutionsLogo } from '../../components/SVG'
-import { Footer } from '../../components/Footer'
+import { Container } from '@layouts/Container'
+import { HTMLHead } from '@components/HTMLHead'
+import { Navbar } from '@layouts/Navbar'
+import { SionnachSolutionsLogo } from '@components/SVG'
+import { Footer } from '@layouts/Footer'
 
 type Props = {
   baseURL: string

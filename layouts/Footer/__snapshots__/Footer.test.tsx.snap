@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer displays copyright with current year and brand 1`] = `
+<footer
+  className="p-10 footer bg-primary text-primary-content footer-center"
+>
+  <div
+    className="grid-rows footer"
+  >
+    <div>
+      <span
+        className="footer-title"
+      >
+        Company
+      </span>
+      <a
+        className="link link-hover"
+        href="/contact"
+      >
+        Contact
+      </a>
+    </div>
+    <div>
+      <span
+        className="footer-title"
+      >
+        Legal
+      </span>
+      <a
+        className="link link-hover"
+        href="/cookie"
+      >
+        Cookie Policy
+      </a>
+    </div>
+  </div>
+  <div>
+    <p>
+      © 2021 Acme Teo.
+    </p>
+  </div>
+</footer>
+`;

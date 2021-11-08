@@ -1,4 +1,4 @@
-import { FooterLinks } from '@components/Footer'
+import { FooterLinks } from '@layouts/Footer'
 import { Copyright } from '@components/Copyright'
 
 import { FOOTER_LINKS } from '@constants/FOOTER_LINKS'
