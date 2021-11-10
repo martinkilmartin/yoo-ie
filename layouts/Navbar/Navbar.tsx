@@ -1,4 +1,4 @@
-import { ThemeToggle } from '@components/Button'
+import { ThemeToggle } from '@components/ThemeToggle'
 
 type Props = {
   logo?: JSX.Element
