@@ -10,11 +10,17 @@ const Navbar = ({ logo, brand }: Props): JSX.Element => (
     {logo && (
       <div className="flex-none">
         {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-        <a href="/">{logo}</a>
+        <a href="/">
+          <span className="sr-only">Home</span>
+          {logo}
+        </a>
       </div>
     )}
     <div className="flex-1 px-2 mx-2">
-      <span className="text-lg font-bold">{brand}</span>
+      <span className="text-lg font-bold">
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a href="/">{brand}</a>
+      </span>
     </div>
     <div className="flex-none">
       <ThemeToggle />

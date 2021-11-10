@@ -7,7 +7,7 @@ type Props = {
   b?: string
 }
 
-const ThemeToggle = ({ a = 'dark', b = 'light' }: Props): JSX.Element => {
+const ThemeToggle = ({ a = 'light', b = 'dark' }: Props): JSX.Element => {
   const [theme, setTheme] = useState(true)
   const toggleTheme = () => setTheme((theme) => !theme)
   return (
@@ -16,6 +16,7 @@ const ThemeToggle = ({ a = 'dark', b = 'light' }: Props): JSX.Element => {
       data-act-class="ACTIVECLASS"
       onClick={toggleTheme}
     >
+      <span className="sr-only">{theme ? a : b}</span>
       {theme ? <Sun /> : <Moon />}
     </button>
   )
