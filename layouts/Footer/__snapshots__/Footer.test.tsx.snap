@@ -9,7 +9,7 @@ exports[`Footer displays copyright with current year and brand 1`] = `
   >
     <div>
       <span
-        className="footer-title"
+        className="opacity-100 footer-title"
       >
         Company
       </span>
@@ -22,7 +22,7 @@ exports[`Footer displays copyright with current year and brand 1`] = `
     </div>
     <div>
       <span
-        className="footer-title"
+        className="opacity-100 footer-title"
       >
         Legal
       </span>
