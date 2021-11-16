@@ -13,21 +13,11 @@ type Props = {
   color?: keyof typeof COLORS
 }
 
-const Alert = ({
-  text,
-  color = 'no',
-}: Props): JSX.Element => {
+const Alert = ({ text, color = 'no' }: Props): JSX.Element => {
   return (
-    <div
-      className={clsx(
-        'alert',
-        COLORS[color]
-      )}
-    >
-      <div class="flex-1">
-        <label class="mx-3">
-          {text}
-        </label>
+    <div className={clsx('alert', COLORS[color])}>
+      <div className="flex-1">
+        <label className="mx-3">{text}</label>
       </div>
     </div>
   )

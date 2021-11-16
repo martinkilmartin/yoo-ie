@@ -1,9 +1,11 @@
 type Props = {
   title?: string
+  name?: string
+  id?: string
   placeholder: string
 }
 
-const TextArea = ({ title, placeholder }: Props): JSX.Element => (
+const TextArea = ({ title, name, placeholder, id }: Props): JSX.Element => (
   <div className="form-control">
     {title && (
       <label className="label">
@@ -13,6 +15,8 @@ const TextArea = ({ title, placeholder }: Props): JSX.Element => (
     <textarea
       className="h-24 textarea textarea-bordered textarea-primary"
       placeholder={placeholder}
+      name={name}
+      id={id}
     ></textarea>
   </div>
 )

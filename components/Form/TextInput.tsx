@@ -1,9 +1,18 @@
 type Props = {
   title?: string
+  type?: string
+  name?: string
+  id?: string
   placeholder: string
 }
 
-const TextInput = ({ title, placeholder }: Props): JSX.Element => (
+const TextInput = ({
+  title,
+  type = 'text',
+  name,
+  placeholder,
+  id,
+}: Props): JSX.Element => (
   <div className="form-control">
     {title && (
       <label className="label">
@@ -11,9 +20,11 @@ const TextInput = ({ title, placeholder }: Props): JSX.Element => (
       </label>
     )}
     <input
-      type="text"
+      type={type}
       placeholder={placeholder}
       className="input input-primary input-bordered"
+      name={name}
+      id={id}
     />
   </div>
 )

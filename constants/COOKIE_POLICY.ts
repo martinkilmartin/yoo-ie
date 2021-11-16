@@ -70,7 +70,7 @@ const CookiePolicy = [
       'You can find more information about the individual cookies we use and the purposes for which we use them in the table below:',
     table: [
       {
-        title: 'DaisyUI Theme Change',
+        title: '🌼 DaisyUI Theme Change',
         name: 'theme',
         purpose: 'This cookie enables us to store your preferred theme.',
       },
