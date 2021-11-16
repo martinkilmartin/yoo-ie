@@ -20,6 +20,7 @@
       "@layouts/*": ["src/layouts/*"],
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
+      "@services/*": ["src/services/*"],
       "@img/*": ["public/img/*"]
     }
   },
