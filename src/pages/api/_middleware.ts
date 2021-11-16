@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { ipRateLimit } from '@lib/ip-rate-limit'
-import getIP from '@lib/get-ip'
+import { ipRateLimit } from 'src/lib/ip-rate-limit'
+import getIP from 'src/lib/get-ip'
 import { ALLOWED_COUNTRY, BLOCKED_COUNTRY } from '@constants/GEO_LOCK'
 
 export async function middleware(req: NextRequest): Promise<Response> {

@@ -80,10 +80,11 @@ export default {
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
-    '^@layouts/(.*)$': '<rootDir>/layouts/$1',
-    '^@lib/(.*)$': '<rootDir>/lib/$1',
-    '^@components/(.*)$': '<rootDir>/components/$1',
-    '^@constants/(.*)$': '<rootDir>/constants/$1',
+    '^@layouts/(.*)$': '<rootDir>/src/layouts/$1',
+    '^@lib/(.*)$': '<rootDir>/src/lib/$1',
+    '^@components/(.*)$': '<rootDir>/src/components/$1',
+    '^@constants/(.*)$': '<rootDir>/src/constants/$1',
+    '^@types/(.*)$': '<rootDir>/src/types/$1',
     '^@img/(.*)$': '<rootDir>/public/img/$1',
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',

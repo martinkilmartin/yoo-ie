@@ -1,4 +1,4 @@
-import { DescriptionCard } from './'
+import { DescriptionCard } from '.'
 
 type Props = {
   title: string

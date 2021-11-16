@@ -16,10 +16,10 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@lib/*": ["lib/*"],
-      "@layouts/*": ["layouts/*"],
-      "@components/*": ["components/*"],
-      "@constants/*": ["constants/*"],
+      "@lib/*": ["src/lib/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@components/*": ["src/components/*"],
+      "@constants/*": ["src/constants/*"],
       "@img/*": ["public/img/*"]
     }
   },
