@@ -15,7 +15,7 @@ const SendPulse = async (
   response: VercelResponse
 ): Promise<void> => {
   try {
-    const { message = '', email = '' } = request.query
+    const { message = '', email = '' } = request.body
     await SendEmail(response, message, email)
   } catch (error) {
     response.status(500).send(error)
