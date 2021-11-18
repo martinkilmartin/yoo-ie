@@ -1,3 +1,5 @@
+import { VercelResponse } from '@vercel/node'
+
 const sendpulse = require('sendpulse-api')
 
 const API_USER_ID = process.env.SENDPULSE_ID
