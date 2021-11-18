@@ -1,7 +1,7 @@
 import { TextArea, TextInput } from '@components/Form'
 import { Button } from '@components/Button'
 
-import submitMessage from '@services/contact'
+import SubmitMessage from '@services/contact'
 
 type Props = {
   messageTitle: string
@@ -21,7 +21,7 @@ const Contact = ({
   return (
     <div className="justify-center max-w-full shadow-2xl card bg-base-100 hero-content">
       <div className="card-body">
-        <form onSubmit={submitMessage}>
+        <form onSubmit={SubmitMessage}>
           <TextArea
             title={messageTitle}
             placeholder={messagePlaceholder}
