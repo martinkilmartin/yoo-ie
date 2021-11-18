@@ -8,7 +8,7 @@ const CONTACT_FROM_NAME = process.env.CONTACT_FROM_NAME
 const CONTACT_TO_NAME = process.env.CONTACT_TO_NAME
 const TOKEN_STORAGE = '/tmp/'
 
-export const SendEmail = async (
+const SendEmail = async (
   response: VercelResponse,
   message: string | string[],
   email: string | string[]
@@ -35,3 +35,5 @@ export const SendEmail = async (
     sendpulse.smtpSendMail(returnResponseData, emailData)
   })
 }
+
+export default SendEmail
