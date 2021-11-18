@@ -1,7 +1,7 @@
 import { TextArea, TextInput } from '@components/Form'
 import { Button } from '@components/Button'
 
-import SubmitMessage from '@services/contact'
+import SubmitMessage from '@services/submitMessage'
 
 type Props = {
   messageTitle: string
