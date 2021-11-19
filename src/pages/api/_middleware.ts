@@ -21,7 +21,7 @@ export async function middleware(req: NextRequest): Promise<Response> {
       }
     )
   } else {
-    return new Response(JSON.stringify({ error: "I'm a teapot" }), {
+    return new Response(JSON.stringify({ error: "I'm a teapot 🫖" }), {
       status: 418,
     })
   }
