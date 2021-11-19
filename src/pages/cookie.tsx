@@ -30,7 +30,7 @@ const Home = ({
 
 export const getStaticProps: GetStaticProps = async () => {
   const baseURL = 'sionnach.solutions'
-  const title = 'Cookie Policy'
+  const title = '🍪 Cookie Policy'
   const brand = 'Sionnach Solutions'
   const heading = 'Introducing Innovation In Irish Internet Industries'
   const messageTitle = title

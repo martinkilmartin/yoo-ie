@@ -15,14 +15,18 @@ type Props = {
 
 const Policy = ({ title, paragraphs }: Props): JSX.Element => (
   <div className="px-4">
-    <h2 className="w-full text-3xl font-extrabold leading-9">{title}</h2>
+    <h2 className="w-full mb-4 text-3xl font-extrabold leading-9 text-center">
+      {title}
+    </h2>
     <div className="flex flex-col mx-auto">
       <dl className="w-full">
         {paragraphs.map((paragraph, i) => (
           <div key={i}>
             {paragraph.title && (
               <dt className="mb-4">
-                <h3 className="text-xl font-semibold">{paragraph.title}</h3>
+                <h3 className="text-xl font-semibold text-center">
+                  {paragraph.title}
+                </h3>
               </dt>
             )}
             {paragraph.content &&
