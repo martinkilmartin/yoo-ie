@@ -15,6 +15,10 @@ export const FOOTER_LINKS = [
         path: '/cookie',
         text: 'Cookie Policy',
       },
+      {
+        path: '/privacy',
+        text: 'Privacy Policy',
+      },
     ],
   },
 ]
