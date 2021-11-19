@@ -4,7 +4,7 @@ import { upstashRest } from './upstash'
 import { IP_LIMIT_QUANTITY, IP_LIMIT_DURATION } from '@constants/IP_LIMIT'
 
 export const ipRateLimit = initRateLimit((request) => ({
-  id: `ip:${getIP(request)}`,
+  id: `${getIP(request)}`,
   count: increment,
   limit: IP_LIMIT_QUANTITY,
   duration: IP_LIMIT_DURATION,
