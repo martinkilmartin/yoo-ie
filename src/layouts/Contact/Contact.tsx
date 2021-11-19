@@ -45,8 +45,8 @@ const Contact = ({
   }
   return (
     <div className="justify-center max-w-full shadow-2xl card bg-base-100 hero-content">
-      {result && <Alert color="success" text="Message received!" />}
-      {error && <Alert color="error" text={`error:${error}`} />}
+      {result && <Alert color="success" text="Message received! 🦊" />}
+      {error && <Alert color="error" text={error} />}
       <div className="card-body">
         <form onSubmit={formSubmit}>
           <TextArea
