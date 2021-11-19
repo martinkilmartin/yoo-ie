@@ -52,7 +52,7 @@ function getHeaders(nameOrHeaders?: RateLimitHeaders) {
 const rateLimited: OnRateLimit = ({ id }) => {
   return new Response(
     JSON.stringify({
-      error: { message: `API rate limit exceeded for ${id}` },
+      error: `API rate limit exceeded for ${id}`,
     }),
     {
       status: 403,

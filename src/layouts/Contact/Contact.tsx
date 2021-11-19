@@ -1,7 +1,7 @@
+import { useState, FormEvent } from 'react'
+import { Alert } from '@components/Alert'
 import { TextArea, TextInput } from '@components/Form'
 import { Button } from '@components/Button'
-
-import SubmitMessage from '@services/submitMessage'
 
 type Props = {
   messageTitle: string
@@ -18,10 +18,37 @@ const Contact = ({
   contactPlaceholder,
   buttonText,
 }: Props): JSX.Element => {
+  const [result, setResult] = useState()
+  const [error, setError] = useState()
+  async function formSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const htmlForm = event.target as HTMLFormElement
+    const res = await fetch('/api/contact', {
+      body: JSON.stringify({
+        email: htmlForm.email.value,
+        message: htmlForm.message.value,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    })
+    const { result, error } = await res.json()
+    if (result) {
+      setResult(result)
+      setError(undefined)
+    }
+    if (error) {
+      setResult(undefined)
+      setError(error)
+    }
+  }
   return (
     <div className="justify-center max-w-full shadow-2xl card bg-base-100 hero-content">
+      {result && <Alert color="success" text="Message received!" />}
+      {error && <Alert color="error" text={`error:${error}`} />}
       <div className="card-body">
-        <form onSubmit={SubmitMessage}>
+        <form onSubmit={formSubmit}>
           <TextArea
             title={messageTitle}
             placeholder={messagePlaceholder}
