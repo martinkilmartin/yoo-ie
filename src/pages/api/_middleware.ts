@@ -14,10 +14,15 @@ export async function middleware(req: NextRequest): Promise<Response> {
     url.searchParams.set('ip', getIP(req))
     return NextResponse.rewrite(url)
   } else if (BLOCKED_COUNTRY.includes(country)) {
-    return new Response(JSON.stringify('BLocked for legal reasons'), {
-      status: 451,
-    })
+    return new Response(
+      JSON.stringify({ error: 'Blocked for legal reasons' }),
+      {
+        status: 451,
+      }
+    )
   } else {
-    return new Response(JSON.stringify("I'm a teapot"), { status: 418 })
+    return new Response(JSON.stringify({ error: "I'm a teapot" }), {
+      status: 418,
+    })
   }
 }
