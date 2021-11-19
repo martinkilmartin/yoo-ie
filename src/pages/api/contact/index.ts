@@ -1,6 +1,6 @@
 import { VercelRequest, VercelResponse } from '@vercel/node'
 
-import SendEmail from '@services/sendEmail' 
+import SendEmail from '@services/sendEmail'
 
 const SendPulse = async (
   request: VercelRequest,

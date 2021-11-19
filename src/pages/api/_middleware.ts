@@ -15,7 +15,10 @@ export async function middleware(req: NextRequest): Promise<Response> {
     return NextResponse.rewrite(url)
   } else if (BLOCKED_COUNTRY.includes(country)) {
     return new Response(
-      JSON.stringify({ error: 'The temperature at which book paper 📖 catches fire and burns 🔥' }),
+      JSON.stringify({
+        error:
+          'The temperature at which book paper 📖 catches fire and burns 🔥',
+      }),
       {
         status: 451,
       }
