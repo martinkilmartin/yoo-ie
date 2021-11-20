@@ -4,6 +4,7 @@ type Props = {
   title: string
   paragraphs: {
     title?: string
+    subTitle?: string
     content?: string[]
     table?: {
       title: string
@@ -27,6 +28,13 @@ const Policy = ({ title, paragraphs }: Props): JSX.Element => (
                 <h3 className="text-xl font-semibold text-center">
                   {paragraph.title}
                 </h3>
+              </dt>
+            )}
+            {paragraph.subTitle && (
+              <dt className="mb-3">
+                <h4 className="text-lg font-semibold text-center">
+                  {paragraph.subTitle}
+                </h4>
               </dt>
             )}
             {paragraph.content &&
