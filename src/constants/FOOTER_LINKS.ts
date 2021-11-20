@@ -19,6 +19,10 @@ export const FOOTER_LINKS = [
         path: '/privacy',
         text: 'Privacy Policy',
       },
+      {
+        path: '/terms',
+        text: 'Terms Of Use',
+      },
     ],
   },
 ]
