@@ -75,6 +75,7 @@ const TermsOfUse = [
   },
   {
     title: '㊙ 11. Privacy policy',
+    content: [
       'We take your privacy and the protection of your data very seriously. We may gather and/or use certain information about you in accordance with our privacy policy. Please see our separate privacy policy for more information.',
     ],
   },
