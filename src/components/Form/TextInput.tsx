@@ -3,6 +3,8 @@ type Props = {
   type?: string
   name?: string
   id?: string
+  minLength?: number
+  maxLength?: number
   placeholder: string
 }
 
@@ -10,8 +12,10 @@ const TextInput = ({
   title,
   type = 'text',
   name,
-  placeholder,
+  minLength = 1,
+  maxLength = 1000,
   id,
+  placeholder,
 }: Props): JSX.Element => (
   <div className="form-control">
     {title && (
@@ -25,6 +29,9 @@ const TextInput = ({
       className="input input-primary input-bordered"
       name={name}
       id={id}
+      minLength={minLength}
+      maxLength={maxLength}
+      required
     />
   </div>
 )

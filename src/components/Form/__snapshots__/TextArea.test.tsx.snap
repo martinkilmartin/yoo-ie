@@ -13,7 +13,10 @@ exports[`TextArea displays label and text-area-input 1`] = `
   </label>
   <textarea
     className="h-24 textarea textarea-bordered textarea-primary"
+    maxLength={10000}
+    minLength={3}
     placeholder="Enter your message here"
+    required={true}
   />
 </div>
 `;
@@ -24,7 +27,10 @@ exports[`TextArea displays text-area-input without label 1`] = `
 >
   <textarea
     className="h-24 textarea textarea-bordered textarea-primary"
+    maxLength={10000}
+    minLength={3}
     placeholder="Enter your message here"
+    required={true}
   />
 </div>
 `;

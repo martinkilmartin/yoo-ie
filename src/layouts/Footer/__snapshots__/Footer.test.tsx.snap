@@ -32,6 +32,18 @@ exports[`Footer displays copyright with current year and brand 1`] = `
       >
         Cookie Policy
       </a>
+      <a
+        className="link link-hover"
+        href="/privacy"
+      >
+        Privacy Policy
+      </a>
+      <a
+        className="link link-hover"
+        href="/terms"
+      >
+        Terms Of Use
+      </a>
     </div>
   </div>
   <div>

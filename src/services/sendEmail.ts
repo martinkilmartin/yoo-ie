@@ -14,7 +14,7 @@ const SendEmail = async (
   response: VercelResponse,
   message: string | string[],
   email: string | string[]
-) => {
+): Promise<void> => {
   sendpulse.init(API_USER_ID, API_SECRET, TOKEN_STORAGE, function () {
     const returnResponseData = function (data: any) {
       response.status(200).send(data)
