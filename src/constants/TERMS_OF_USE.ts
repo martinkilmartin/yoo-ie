@@ -34,9 +34,7 @@ const TermsOfUse = [
   },
   {
     title: '📧 5. If you need to talk to us',
-    content: [
-      'You can contact us through our Contact Us page on the website.',
-    ],
+    content: ['You can contact us through our Contact Us page on the website.'],
   },
   {
     title: '💾 6. Monitoring phone calls and emails',
