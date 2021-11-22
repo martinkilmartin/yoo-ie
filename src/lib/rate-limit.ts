@@ -49,10 +49,10 @@ function getHeaders(nameOrHeaders?: RateLimitHeaders) {
     : nameOrHeaders
 }
 
-const rateLimited: OnRateLimit = ({ id }) => {
+const rateLimited: OnRateLimit = () => {
   return new Response(
     JSON.stringify({
-      error: `Woah there Betsy 🐄 @ ${id}`,
+      error: `Woah there Betsy 🐄`,
     }),
     {
       status: 403,
