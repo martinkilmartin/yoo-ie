@@ -1,65 +1,29 @@
-import { GetStaticProps } from 'next'
-
+import {
+  CONTACT_TITLE,
+  BRAND,
+  TAG_LINE,
+  CONTACT_MESSAGE_TITLE,
+  CONTACT_MESSAGE_PLACEHOLDER,
+  CONTACT_EMAIL_TITLE,
+  CONTACT_EMAIL_PLACEHOLDER,
+  CONTACT_BUTTON_TITLE,
+} from '@constants/CONTENT'
 import { Container } from '@layouts/Container'
 import { Page } from '@layouts/Page'
 import { Contact } from '@layouts/Contact'
 
-type Props = {
-  title: string
-  brand: string
-  heading: string
-  messageTitle: string
-  messagePlaceholder: string
-  contactTitle: string
-  contactPlaceholder: string
-  buttonText: string
-}
-
-const Home = ({
-  title,
-  brand,
-  heading,
-  messageTitle,
-  messagePlaceholder,
-  contactTitle,
-  contactPlaceholder,
-  buttonText,
-}: Props): JSX.Element => (
+const ContactPage = (): JSX.Element => (
   <Container>
-    <Page title={title} brand={brand} heading={heading}>
+    <Page title={CONTACT_TITLE} brand={BRAND} heading={TAG_LINE}>
       <Contact
-        messageTitle={messageTitle}
-        messagePlaceholder={messagePlaceholder}
-        contactTitle={contactTitle}
-        contactPlaceholder={contactPlaceholder}
-        buttonText={buttonText}
+        messageTitle={CONTACT_MESSAGE_TITLE}
+        messagePlaceholder={CONTACT_MESSAGE_PLACEHOLDER}
+        contactTitle={CONTACT_EMAIL_TITLE}
+        contactPlaceholder={CONTACT_EMAIL_PLACEHOLDER}
+        buttonText={CONTACT_BUTTON_TITLE}
       />
     </Page>
   </Container>
 )
 
-export const getStaticProps: GetStaticProps = async () => {
-  const title = 'Send us a message'
-  const brand = 'Sionnach Solutions'
-  const heading = 'Introducing Innovation In Irish Internet Industries'
-  const messageTitle = 'Message'
-  const messagePlaceholder = 'Enter your message here'
-  const contactTitle = 'Email'
-  const contactPlaceholder = 'your@email.address'
-  const buttonText = 'Send'
-
-  return {
-    props: {
-      title,
-      brand,
-      heading,
-      messageTitle,
-      messagePlaceholder,
-      contactTitle,
-      contactPlaceholder,
-      buttonText,
-    },
-  }
-}
-
-export default Home
+export default ContactPage

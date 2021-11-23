@@ -1,45 +1,15 @@
-import { GetStaticProps } from 'next'
-
+import { COOKIE_TITLE, BRAND, TAG_LINE } from '@constants/CONTENT'
+import CookiePolicy from '@constants/COOKIE_POLICY'
 import { Container } from '@layouts/Container'
 import { Page } from '@layouts/Page'
 import { Policy } from '@layouts/Legal'
 
-import CookiePolicy from '@constants/COOKIE_POLICY'
-
-type Props = {
-  title: string
-  brand: string
-  heading: string
-  messageTitle: string
-}
-
-const Cookie = ({
-  title,
-  brand,
-  heading,
-  messageTitle,
-}: Props): JSX.Element => (
+const Cookie = (): JSX.Element => (
   <Container>
-    <Page title={title} brand={brand} heading={heading}>
-      <Policy title={messageTitle} paragraphs={CookiePolicy} />
+    <Page title={COOKIE_TITLE} brand={BRAND} heading={TAG_LINE}>
+      <Policy title={COOKIE_TITLE} paragraphs={CookiePolicy} />
     </Page>
   </Container>
 )
-
-export const getStaticProps: GetStaticProps = async () => {
-  const title = '🍪 Cookie Policy'
-  const brand = 'Sionnach Solutions'
-  const heading = 'Introducing Innovation In Irish Internet Industries'
-  const messageTitle = title
-
-  return {
-    props: {
-      title,
-      brand,
-      heading,
-      messageTitle,
-    },
-  }
-}
 
 export default Cookie
