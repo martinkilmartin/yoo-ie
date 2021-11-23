@@ -4,14 +4,14 @@ type Props = {
   title: string
   description: string
   appName: string
-  baseURL: string
+  baseURL?: string
 }
 
 const HTMLHead = ({
   title,
   description,
   appName,
-  baseURL,
+  baseURL = process.env.NEXT_PUBLIC_BASE_URL ?? '',
 }: Props): JSX.Element => (
   <Head>
     <title>{title}</title>

@@ -5,7 +5,6 @@ import { Page } from '@layouts/Page'
 import { Contact } from '@layouts/Contact'
 
 type Props = {
-  baseURL: string
   title: string
   brand: string
   heading: string
@@ -17,7 +16,6 @@ type Props = {
 }
 
 const Home = ({
-  baseURL,
   title,
   brand,
   heading,
@@ -28,7 +26,7 @@ const Home = ({
   buttonText,
 }: Props): JSX.Element => (
   <Container>
-    <Page baseURL={baseURL} title={title} brand={brand} heading={heading}>
+    <Page title={title} brand={brand} heading={heading}>
       <Contact
         messageTitle={messageTitle}
         messagePlaceholder={messagePlaceholder}
@@ -41,7 +39,6 @@ const Home = ({
 )
 
 export const getStaticProps: GetStaticProps = async () => {
-  const baseURL = 'sionnach.solutions'
   const title = 'Send us a message'
   const brand = 'Sionnach Solutions'
   const heading = 'Introducing Innovation In Irish Internet Industries'
@@ -53,7 +50,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      baseURL,
       title,
       brand,
       heading,

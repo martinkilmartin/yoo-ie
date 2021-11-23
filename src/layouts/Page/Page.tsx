@@ -7,27 +7,15 @@ import { SionnachSolutionsLogo } from '@components/SVG'
 import { Footer } from '@layouts/Footer'
 
 type Props = {
-  baseURL: string
   title: string
   brand: string
   heading: string
   children: ReactNode
 }
 
-const Page = ({
-  baseURL,
-  title,
-  brand,
-  heading,
-  children,
-}: Props): JSX.Element => (
+const Page = ({ title, brand, heading, children }: Props): JSX.Element => (
   <Container>
-    <HTMLHead
-      title={title}
-      description={heading}
-      appName={brand}
-      baseURL={baseURL}
-    />
+    <HTMLHead title={title} description={heading} appName={brand} />
     <Navbar logo={<SionnachSolutionsLogo />} brand={brand} />
     {children}
     <Footer brand={brand} />

@@ -7,29 +7,26 @@ import { Policy } from '@layouts/Legal'
 import CookiePolicy from '@constants/COOKIE_POLICY'
 
 type Props = {
-  baseURL: string
   title: string
   brand: string
   heading: string
   messageTitle: string
 }
 
-const Home = ({
-  baseURL,
+const Cookie = ({
   title,
   brand,
   heading,
   messageTitle,
 }: Props): JSX.Element => (
   <Container>
-    <Page baseURL={baseURL} title={title} brand={brand} heading={heading}>
+    <Page title={title} brand={brand} heading={heading}>
       <Policy title={messageTitle} paragraphs={CookiePolicy} />
     </Page>
   </Container>
 )
 
 export const getStaticProps: GetStaticProps = async () => {
-  const baseURL = 'sionnach.solutions'
   const title = '🍪 Cookie Policy'
   const brand = 'Sionnach Solutions'
   const heading = 'Introducing Innovation In Irish Internet Industries'
@@ -37,7 +34,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      baseURL,
       title,
       brand,
       heading,
@@ -46,4 +42,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default Home
+export default Cookie

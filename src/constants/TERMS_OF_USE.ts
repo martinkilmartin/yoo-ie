@@ -2,10 +2,10 @@ const TermsOfUse = [
   {
     title: '🪧 1. About these Terms of Use',
     content: [
-      `Welcome to ${process.env.WELCOME_NAME}!`,
-      `Last updated: ${process.env.TOU_LAST_UPDATED}`,
-      `We are ${process.env.COMPANY_NAME} incorporated in ${process.env.COMPANY_COUNTRY} under company registration number ${process.env.COMPANY_NUMBER}. Our registered office is at ${process.env.POSTAL_ADDRESS}.`,
-      `We are also ${process.env.COMPANY_NAME_ALT} incorporated in ${process.env.COMPANY_COUNTRY_ALT} as ${process.env.COMPANY_NUMBER_ALT}. Our registered office is at ${process.env.POSTAL_ADDRESS_ALT}.`,
+      `Welcome to ${process.env.NEXT_PUBLIC_WELCOME_NAME}!`,
+      `Last updated: ${process.env.NEXT_PUBLIC_TOU_LAST_UPDATED}`,
+      `We are ${process.env.NEXT_PUBLIC_COMPANY_NAME} incorporated in ${process.env.NEXT_PUBLIC_COMPANY_COUNTRY} under company registration number ${process.env.NEXT_PUBLIC_COMPANY_NUMBER}. Our registered office is at ${process.env.NEXT_PUBLIC_POSTAL_ADDRESS}.`,
+      `We are also ${process.env.NEXT_PUBLIC_COMPANY_NAME_ALT} incorporated in ${process.env.NEXT_PUBLIC_COMPANY_COUNTRY_ALT} as ${process.env.NEXT_PUBLIC_COMPANY_NUMBER_ALT}. Our registered office is at ${process.env.NEXT_PUBLIC_POSTAL_ADDRESS_ALT}.`,
       'These Terms of Use apply to the use of this website, regardless of how you access it. Please read these Terms of Use carefully before you proceed.',
       'We may, at any time and without notice, terminate your access to or use of this website. If we do so, you do not have the right to bring any claim or claims against us.',
     ],

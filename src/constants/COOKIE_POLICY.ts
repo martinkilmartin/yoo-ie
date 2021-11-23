@@ -86,7 +86,7 @@ const CookiePolicy = [
   },
   {
     content: [
-      `📧 If you have any questions about the cookies that we use, feel free to email us at ${process.env.EMAIL_ADDRESS_PRIVACY}.`,
+      `📧 If you have any questions about the cookies that we use, feel free to email us at ${process.env.NEXT_PUBLIC_EMAIL_ADDRESS_PRIVACY}.`,
     ],
   },
 ]
