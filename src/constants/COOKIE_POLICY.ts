@@ -86,7 +86,7 @@ const CookiePolicy = [
   },
   {
     content: [
-      '📧 If you have any questions about the cookies that we use, feel free to email us at cookies@sionnach.solutions.',
+      `📧 If you have any questions about the cookies that we use, feel free to email us at ${process.env.EMAIL_ADDRESS_PRIVACY}.`,
     ],
   },
 ]

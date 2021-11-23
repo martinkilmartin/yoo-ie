@@ -2,14 +2,14 @@ const PrivacyPolicy = [
   {
     title: '👋 1. INTRODUCTION',
     content: [
-      'This privacy notice provides you with details of how we collect and process your personal data through your use of our site(s) sionnach.solutions and sionnachsolutions.com.',
+      `This privacy notice provides you with details of how we collect and process your personal data through your use of our site(s) ${process.env.WEBSITE_DOMAIN} and ${process.env.WEBSITE_DOMAIN_ALT}.`,
       'By providing us with your data, you warrant to us that you are over 13 years of age.',
-      'Sionnach Buí Limited is the data controller and we are responsible for your personal data (referred to as “we”, “us” or “our” in this privacy notice).',
+      `${process.env.COMPANY_NAME} is the data controller and we are responsible for your personal data (referred to as “we”, “us” or “our” in this privacy notice).`,
       'Our full contact details are:',
-      'Full name of legal entity: Sionnach Buí Limited (Ireland) | Sionnach Solutions (Quebec)',
-      'Email address: privacy@sionnach.solutions',
-      'Postal address: H91 VH4C (Ireland) | 1870 Rue Mullins, Montréal, QC H3K 1N8 (Canada)',
-      'It is very important that the information we hold about you is accurate and up to date. Please let us know if at any time your personal information changes by emailing us at privacy@sionnach.solutions.',
+      `Full name of legal entity: ${process.env.COMPANY_NAME_LOCATION} | ${process.env.COMPANY_NAME_LOCATION_ALT}`,
+      `Email address: ${process.env.EMAIL_ADDRESS_PRIVACY}`,
+      `Postal address: ${process.env.POSTAL_ADDRESS} | ${process.env.POSTAL_ADDRESS_ALT}`,
+      `It is very important that the information we hold about you is accurate and up to date. Please let us know if at any time your personal information changes by emailing us at ${process.env.EMAIL_ADDRESS_PRIVACY}`,
     ],
   },
   {
@@ -25,7 +25,7 @@ const PrivacyPolicy = [
       'Marketing Data that includes data about your preferences in receiving marketing from us and our third parties and your communication preferences. We process this data to enable you to partake in our promotions such as competitions, prize draws and free give-aways, to deliver relevant website content and advertisements to you and measure or understand the effectiveness of this advertising.  Our lawful ground for this processing is our legitimate interests which in this case are to study how customers use our products/services, to develop them, to grow our business and to decide our marketing strategy.',
       'We do not collect any Sensitive Data about you. Sensitive data refers to data that includes details about your race or ethnicity, religious or philosophical beliefs, sex life, sexual orientation, political opinions, trade union membership, information about your health and genetic and biometric data. We do not collect any information about criminal convictions and offences.',
       'Where we are required to collect personal data by law, or under the terms of the contract between us and you do not provide us with that data when requested, we may not be able to perform the contract (for example, to deliver goods or services to you). If you don’t provide us with the requested data, we may have to cancel a product or service you have ordered but if we do, we will notify you at the time.',
-      'We will only use your personal data for a purpose it was collected for or a reasonably compatible purpose if necessary. For more information on this please email us at privacy@sionnach.solutions. In case we need to use your details for an unrelated new purpose we will let you know and explain the legal grounds for processing.',
+      `We will only use your personal data for a purpose it was collected for or a reasonably compatible purpose if necessary. For more information on this please email us at ${process.env.EMAIL_ADDRESS_PRIVACY}. In case we need to use your details for an unrelated new purpose we will let you know and explain the legal grounds for processing.`,
       'We may process your personal data without your knowledge or consent where this is required or permitted by law.',
       'We do not carry out automated decision making or any type of automated profiling.',
     ],
@@ -35,7 +35,7 @@ const PrivacyPolicy = [
     content: [
       'Our lawful ground of processing your personal data to send you marketing communications is either your consent or our legitimate interests (namely to grow our business).',
       'Before we share your personal data with any third party for their own marketing purposes we will get your express consent.',
-      'You can ask us or third parties to stop sending you marketing messages at any time by following the opt-out links on any marketing message sent to you or by emailing us at privacy@sionnach.solutions at any time.',
+      `You can ask us or third parties to stop sending you marketing messages at any time by following the opt-out links on any marketing message sent to you or by emailing us at ${process.env.EMAIL_ADDRESS_PRIVACY} at any time.`,
       'If you opt out of receiving marketing communications this opt-out does not apply to personal data provided as a result of other transactions, such as purchases, warranty registrations etc.',
     ],
   },
@@ -85,7 +85,7 @@ const PrivacyPolicy = [
       '🇮🇪 If you are within in Ireland, you can see more about these rights at: https://www.dataprotection.ie/en/individuals/rights-individuals-under-general-data-protection-regulation/.',
       '🇪🇺 If you are elsewhere in the EU, you can see more about these rights at: https://edps.europa.eu/data-protection/our-work/subjects/rights-individual_en/.',
       '🇬🇧 If you are within the UK, you can see more about these rights at: https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/.',
-      'If you wish to exercise any of the rights set out above, please email us at privacy@sionnach.solutions.',
+      `If you wish to exercise any of the rights set out above, please email us at ${process.env.EMAIL_ADDRESS_PRIVACY}.`,
       '🇨🇦 If you are within Canada, you can see more about your rights at: https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/p_principle/principles/p_access/.',
       '🇺🇸 If you are within California, you can see more about your rights at: https://oag.ca.gov/privacy/ccpa/.',
       'You will not have to pay a fee to access your personal data (or to exercise any of the other rights). However, we may charge a reasonable fee if your request is clearly unfounded, repetitive or excessive or refuse to comply with your request in these circumstances.',
@@ -104,7 +104,7 @@ const PrivacyPolicy = [
   {
     title: '🍪 10. COOKIES  ',
     content: [
-      'You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. If you disable or refuse cookies, please note that some parts of this website may become inaccessible or not function properly. For more information about the cookies we use, please see https://sionnach.solutions/cookie/.',
+      `You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. If you disable or refuse cookies, please note that some parts of this website may become inaccessible or not function properly. For more information about the cookies we use, please see ${process.env.URL_COOKIE}.`,
     ],
   },
 ]

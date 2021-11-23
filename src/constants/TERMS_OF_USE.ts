@@ -2,10 +2,10 @@ const TermsOfUse = [
   {
     title: '🪧 1. About these Terms of Use',
     content: [
-      'Welcome to Sionnach Solutions!',
-      'Last updated: 19 November 2021',
-      'We are Sionnach Buí Limited incorporated in Ireland under company registration number 640733. Our registered office is at H91 VH4C.',
-      'We are also Sionnach Solutions incorporated in Canada as 9196692 Canada Inc. Our registered office is at 1870 Rue Mullins, Montréal, QC H3K 1N8, Canada.',
+      `Welcome to ${process.env.WELCOME_NAME}!`,
+      `Last updated: ${process.env.TOU_LAST_UPDATED}`,
+      `We are ${process.env.COMPANY_NAME} incorporated in ${process.env.COMPANY_COUNTRY} under company registration number ${process.env.COMPANY_NUMBER}. Our registered office is at ${process.env.POSTAL_ADDRESS}.`,
+      `We are also ${process.env.COMPANY_NAME_ALT} incorporated in ${process.env.COMPANY_COUNTRY_ALT} as ${process.env.COMPANY_NUMBER_ALT}. Our registered office is at ${process.env.POSTAL_ADDRESS_ALT}.`,
       'These Terms of Use apply to the use of this website, regardless of how you access it. Please read these Terms of Use carefully before you proceed.',
       'We may, at any time and without notice, terminate your access to or use of this website. If we do so, you do not have the right to bring any claim or claims against us.',
     ],
@@ -39,7 +39,7 @@ const TermsOfUse = [
   {
     title: '💾 6. Monitoring phone calls and emails',
     content: [
-      'We may monitor and record our calls and emails, so we can find out where we need to improve and check we’re keeping to our normal practises and procedures.',
+      'We may monitor and record our calls and emails, so we can find out where we need to improve and check we’re keeping to our normal practices and procedures.',
     ],
   },
   {
