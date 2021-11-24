@@ -1,4 +1,6 @@
 import { useState, FormEvent } from 'react'
+
+import { CONTACT_SUCCESS, CONTACT_FAILURE } from '@constants/CONTENT'
 import { Alert } from '@components/Alert'
 import { TextArea, TextInput } from '@components/Form'
 import { Button } from '@components/Button'
@@ -45,8 +47,8 @@ const Contact = ({
   }
   return (
     <div className="justify-center max-w-full shadow-2xl card bg-base-100 hero-content">
-      {result && <Alert color="success" text="Message received! 🦊" />}
-      {error && <Alert color="error" text={error} />}
+      {result && <Alert color="success" text={CONTACT_SUCCESS} />}
+      {error && <Alert color="error" text={CONTACT_FAILURE} />}
       <div className="card-body">
         <form onSubmit={formSubmit}>
           <TextArea

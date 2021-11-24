@@ -2,6 +2,8 @@ import { VercelResponse } from '@vercel/node'
 
 const sendpulse = require('sendpulse-api')
 
+import { CONTACT_EMAIL_SUBJECT } from '@constants/CONTENT'
+
 const API_USER_ID = process.env.SENDPULSE_ID
 const API_SECRET = process.env.SENDPULSE_SECRET
 const CONTACT_FROM_EMAIL = process.env.CONTACT_FROM_EMAIL
@@ -22,7 +24,7 @@ const SendEmail = async (
     const emailData = {
       html: `<p>${message}</p><p>${email}</p>`,
       text: `${message}+${email}`,
-      subject: 'Website Enquiry',
+      subject: CONTACT_EMAIL_SUBJECT,
       from: {
         name: CONTACT_FROM_NAME,
         email: CONTACT_FROM_EMAIL,

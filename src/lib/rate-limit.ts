@@ -1,5 +1,7 @@
 import type { NextRequest } from 'next/server'
 
+import { HTTP_403 } from '@constants/CONTENT'
+
 export interface RateLimitContextBase {
   id: string
   limit: number
@@ -52,7 +54,7 @@ function getHeaders(nameOrHeaders?: RateLimitHeaders) {
 const rateLimited: OnRateLimit = () => {
   return new Response(
     JSON.stringify({
-      error: `Woah there Betsy 🐄`,
+      error: HTTP_403,
     }),
     {
       status: 403,
