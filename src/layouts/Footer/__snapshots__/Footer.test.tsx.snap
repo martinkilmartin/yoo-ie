@@ -48,7 +48,7 @@ exports[`Footer displays copyright with current year and brand 1`] = `
   </div>
   <div>
     <p>
-      © 2021 Acme Teo.
+      © 2021 Sionnach Solutions
     </p>
   </div>
 </footer>

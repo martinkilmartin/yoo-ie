@@ -1,9 +1,7 @@
-type Props = {
-  brand: string
-}
+import { BRAND } from '@constants/CONTENT'
 
-const Copyright = ({ brand }: Props): JSX.Element => (
-  <p>{`© ${new Date().getFullYear()} ${brand}`}</p>
+const Copyright = (): JSX.Element => (
+  <p>{`© ${new Date().getFullYear()} ${BRAND}`}</p>
 )
 
 export default Copyright

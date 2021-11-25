@@ -8,17 +8,16 @@ import { Footer } from '@layouts/Footer'
 
 type Props = {
   title: string
-  brand: string
   heading: string
   children: ReactNode
 }
 
-const Page = ({ title, brand, heading, children }: Props): JSX.Element => (
+const Page = ({ title, heading, children }: Props): JSX.Element => (
   <Container>
-    <HTMLHead title={title} description={heading} appName={brand} />
-    <Navbar logo={<SionnachSolutionsLogo />} brand={brand} />
+    <HTMLHead title={title} description={heading} />
+    <Navbar logo={<SionnachSolutionsLogo />} />
     {children}
-    <Footer brand={brand} />
+    <Footer />
   </Container>
 )
 

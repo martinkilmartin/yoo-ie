@@ -1,6 +1,5 @@
 import {
   CONTACT_TITLE,
-  BRAND,
   TAG_LINE,
   CONTACT_MESSAGE_TITLE,
   CONTACT_MESSAGE_PLACEHOLDER,
@@ -14,7 +13,7 @@ import { Contact } from '@layouts/Contact'
 
 const ContactPage = (): JSX.Element => (
   <Container>
-    <Page title={CONTACT_TITLE} brand={BRAND} heading={TAG_LINE}>
+    <Page title={CONTACT_TITLE} heading={TAG_LINE}>
       <Contact
         messageTitle={CONTACT_MESSAGE_TITLE}
         messagePlaceholder={CONTACT_MESSAGE_PLACEHOLDER}

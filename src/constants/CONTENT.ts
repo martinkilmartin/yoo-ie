@@ -1,4 +1,5 @@
 export const APP_TITLE = 'Sionnach Solutions a.k.a. Sionnach Buí'
+export const BASE_URL = 'sionnach.solutions'
 export const BRAND = 'Sionnach Solutions'
 export const TAG_LINE = 'Introducing Innovation In Irish Internet Industries'
 export const HERO_IMG = '@img/bg/simple-software-solutions-2400w.jpg'
@@ -18,3 +19,6 @@ export const HTTP_403 = 'Woah there Betsy 🐄'
 export const HTTP_418 = "I'm a Teapot 🫖"
 export const HTTP_451 =
   'The temperature at which book paper 📖 catches fire and burns 🔥'
+export const COLOR_MS_TILE = '#ffffff'
+export const COLOR_SAFARI_PIN = '#ffffff'
+export const COLOR_THEME = '#000000'
