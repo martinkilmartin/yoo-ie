@@ -12,9 +12,9 @@ const FooterLinks = ({ links }: Props): JSX.Element => (
   <div className="grid-rows footer">
     {links.map((link, i) => (
       <div key={i}>
-        <span className="opacity-100 footer-title">{link.title}</span>
+        <span className="text-xl opacity-100 footer-title">{link.title}</span>
         {link.urls.map((link, index) => (
-          <a key={index} href={link.path} className="link link-hover">
+          <a key={index} href={link.path} className="text-lg link link-hover">
             {link.text}
           </a>
         ))}

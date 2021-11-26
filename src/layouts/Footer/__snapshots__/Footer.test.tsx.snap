@@ -9,12 +9,12 @@ exports[`Footer displays copyright with current year and brand 1`] = `
   >
     <div>
       <span
-        className="opacity-100 footer-title"
+        className="text-xl opacity-100 footer-title"
       >
         Company
       </span>
       <a
-        className="link link-hover"
+        className="text-lg link link-hover"
         href="/contact"
       >
         Contact
@@ -22,24 +22,24 @@ exports[`Footer displays copyright with current year and brand 1`] = `
     </div>
     <div>
       <span
-        className="opacity-100 footer-title"
+        className="text-xl opacity-100 footer-title"
       >
         Legal
       </span>
       <a
-        className="link link-hover"
+        className="text-lg link link-hover"
         href="/cookie"
       >
         Cookie Policy
       </a>
       <a
-        className="link link-hover"
+        className="text-lg link link-hover"
         href="/privacy"
       >
         Privacy Policy
       </a>
       <a
-        className="link link-hover"
+        className="text-lg link link-hover"
         href="/terms"
       >
         Terms Of Use
