@@ -22,8 +22,8 @@ const SendEmail = async (
       response.status(200).send(data)
     }
     const emailData = {
-      html: `<p>${message}</p><p>${email}</p>`,
-      text: `${message}+${email}`,
+      html: `<h1>${email}</h1><p>${message}</p>`,
+      text: `${email}+${message}`,
       subject: CONTACT_EMAIL_SUBJECT,
       from: {
         name: CONTACT_FROM_NAME,
