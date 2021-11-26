@@ -15,9 +15,9 @@ type Props = {
 
 const Alert = ({ text, color = 'no' }: Props): JSX.Element => {
   return (
-    <div className={clsx('alert', COLORS[color])}>
+    <div className={clsx('alert my-3', COLORS[color])}>
       <div className="flex-1">
-        <label className="mx-3">{text}</label>
+        <label className="mx-auto">{text}</label>
       </div>
     </div>
   )
