@@ -14,14 +14,14 @@ const TermsOfUse = [
     title: '✅ 2. Consent to Terms of Use',
     content: [
       'By using this website you agree to these Terms of Use.',
-      'If you do not agree to these Terms of Use, please do not ask us to find you a professional or use this website. These Terms of Use were last updated on the date shown at the top. We may change these Terms of Use at any time by posting an updated version on our website, so you may wish to check it before using this website. You may only use this website for lawful purposes.',
+      'If you do not agree to these Terms of Use, please do not use this website. These Terms of Use were last updated on the date shown at the top. We may change these Terms of Use at any time by posting an updated version on our website, so you may wish to check it before using this website. You may only use this website for lawful purposes.',
     ],
   },
   {
     title: '✔ 3. Our liability',
     content: [
       'Nothing in these terms limits our liability for death or personal injury caused by our negligence, fraud or fraudulent misrepresentation or for any matter that we cannot exclude or limit as a matter of law.',
-      'We provide the website to Customers free of charge and on an “as is” basis. We introduce Customers to Professionals to provide the services described on the website, and are not responsible or liable for the end services that are provided.',
+      'We provide the website free of charge and on an “as is” basis.',
       'Therefore, to the extent permitted by law, (a) we disclaim any warranties, express or implied, and (b) other than as set out above, we are not liable for any loss or damage — direct or indirect and whether arising in contract, tort, or otherwise — even if we have been advised of the possibility of this loss or damage.',
       'These limitations don’t affect your statutory rights under the Consumer Protection Act 2007, if applicable and any laws that replace it. If you want independent advice about your rights, you can speak to Citizens Information or the European Consumer Centre.',
     ],
@@ -74,7 +74,7 @@ const TermsOfUse = [
   {
     title: '㊙ 11. Privacy policy',
     content: [
-      'We take your privacy and the protection of your data very seriously. We may gather and/or use certain information about you in accordance with our privacy policy. Please see our separate privacy policy for more information.',
+      'We take your privacy and the protection of your data very seriously. We may gather and/or use certain information about you in accordance with our Privacy Policy. Please see our separate privacy policy for more information.',
     ],
   },
   {
