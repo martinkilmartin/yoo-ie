@@ -8,7 +8,6 @@ const PrivacyPolicy = [
       'Our full contact details are:',
       `Full name of legal entity: ${process.env.NEXT_PUBLIC_COMPANY_NAME_LOCATION} | ${process.env.NEXT_PUBLIC_COMPANY_NAME_LOCATION_ALT}`,
       `Email address: ${process.env.NEXT_PUBLIC_EMAIL_ADDRESS_PRIVACY}`,
-      `Postal address: ${process.env.NEXT_PUBLIC_POSTAL_ADDRESS} | ${process.env.NEXT_PUBLIC_POSTAL_ADDRESS_ALT}`,
       `It is very important that the information we hold about you is accurate and up to date. Please let us know if at any time your personal information changes by emailing us at ${process.env.NEXT_PUBLIC_EMAIL_ADDRESS_PRIVACY}`,
     ],
   },
