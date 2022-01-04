@@ -7,7 +7,7 @@ type Props = {
   b?: string
 }
 
-const ThemeToggle = ({ a = 'cmyk', b = 'dark' }: Props): JSX.Element => {
+const ThemeToggle = ({ a = 'emerald', b = 'halloween' }: Props): JSX.Element => {
   const [theme, setTheme] = useState(true)
   const toggleTheme = () => setTheme((theme) => !theme)
   return (
