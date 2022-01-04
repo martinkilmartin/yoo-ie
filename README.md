@@ -1,6 +1,6 @@
-# sionnach.solutions
+# yoo.ie
 
-Website for Sionnach Solutions / Sionnach Buí
+Website for Yoo.ie
 
 ## Run dev build & start dev server
 
