@@ -1,5 +1,5 @@
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT'
-import heroBGImage from '@img/bg/simple-software-solutions-2400w.jpg'
+import heroBGImage from '@img/bg/user-interfaces-ecommerce-integrations-2400w.jpg'
 import { Container } from '@layouts/Container'
 import { Page } from '@layouts/Page'
 import { Hero } from '@layouts/Hero'

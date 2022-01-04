@@ -1,6 +1,6 @@
 {
-    "name": "Sionnach Solutions a.k.a. Sionnach Buí",
-    "short_name": "Sionnach Solutions",
+    "name": "Yoo.IE",
+    "short_name": "Yoo.IE",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -11,17 +11,9 @@
             "src": "/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
         }
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "/",
-    "display": "standalone",
-    "orientation": "portrait"
+    "display": "standalone"
 }
